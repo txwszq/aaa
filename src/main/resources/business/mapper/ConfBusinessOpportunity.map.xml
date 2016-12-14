@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kedacom.expenses.model.baseconfig.ConfBusinessOpportunity" >
+  <resultMap id="ConfBusinessOpportunity" type="com.kedacom.expenses.model.baseconfig.ConfBusinessOpportunity" >
+    <id column="ID" property="id" jdbcType="BIGINT" />
+    <result column="BO_CRM_ID" property="boCrmId" jdbcType="VARCHAR" />
+    <result column="BO_NAME" property="boName" jdbcType="VARCHAR" />
+    <result column="BO_CODE" property="boCode" jdbcType="VARCHAR" />
+    <result column="BO_BUDGET" property="boBudget" jdbcType="VARCHAR"/>
+    <result column="IS_PROJECT_APPROVAL" property="isProjectApproval" jdbcType="BIT" />
+    <result column="PROJECT_APPROVAL_TIME" property="projectApprovalTime" jdbcType="TIMESTAMP" />
+    <result column="PROJECT_APPROVAL_ENDTIME" property="projectApprovalEndtime" jdbcType="TIMESTAMP" />
+    <result column="BO_PRINCIPAL_CODE" property="boPrincipalCode" jdbcType="VARCHAR" />
+    <result column="DEP_EHR_PK" property="depEhrPk" jdbcType="VARCHAR" />
+    <result column="DATA_SOURCE" property="dataSource" jdbcType="SMALLINT" />
+  </resultMap>
+  
+  <sql id="columns" >
+    ID, BO_CRM_ID, BO_NAME, BO_CODE, BO_BUDGET, IS_PROJECT_APPROVAL, PROJECT_APPROVAL_TIME, 
+    PROJECT_APPROVAL_ENDTIME, BO_PRINCIPAL_CODE, DEP_EHR_PK, DATA_SOURCE
+  </sql>
+  
+  <sql id="dynamicWhere" >
+  	<where >
+  		<if test="@Ognl@isNotEmpty(id)"> AND ID  =#{id} </if>
+		<if test="@Ognl@isNotEmpty(boCrmId)"> AND BO_CRM_ID  LIKE '%${boCrmId}%'  </if>
+		<if test="@Ognl@isNotEmpty(boName)"> AND BO_NAME  LIKE '%${boName}%'  </if>
+		<if test="@Ognl@isNotEmpty(boCode)"> AND BO_CODE  LIKE '%${boCode}%'  </if>
+		<if test="@Ognl@isNotEmpty(boBudget)"> AND BO_BUDGET  =#{boBudget} </if>
+		<if test="@Ognl@isNotEmpty(isProjectApproval)"> AND IS_PROJECT_APPROVAL  =#{isProjectApproval} </if>
+		<if test="@Ognl@isNotEmpty(projectApprovalTime)"> AND PROJECT_APPROVAL_TIME  =#{projectApprovalTime} </if>
+		<if test="@Ognl@isNotEmpty(projectApprovalEndtime)"> AND PROJECT_APPROVAL_ENDTIME  =#{projectApprovalEndtime} </if>
+		<if test="@Ognl@isNotEmpty(boPrincipalCode)"> AND BO_PRINCIPAL_CODE  LIKE '%${boPrincipalCode}%'  </if>
+		<if test="@Ognl@isNotEmpty(depEhrPk)"> AND DEP_EHR_PK  LIKE '%${depEhrPk}%'  </if>
+		<if test="@Ognl@isNotEmpty(dataSource)"> AND DATA_SOURCE  =#{dataSource} </if>
+    </where>
+  </sql>
+  
+  	<insert id="add" parameterType="com.kedacom.expenses.model.baseconfig.ConfBusinessOpportunity">
+		INSERT INTO conf_business_opportunity
+		(BO_CRM_ID, BO_NAME, BO_CODE, BO_BUDGET, IS_PROJECT_APPROVAL, PROJECT_APPROVAL_TIME, 
+    	PROJECT_APPROVAL_ENDTIME, BO_PRINCIPAL_CODE, DEP_EHR_PK, DATA_SOURCE)
+		VALUES
+		(#{boCrmId,jdbcType=VARCHAR}, #{boName,jdbcType=VARCHAR}, #{boCode,jdbcType=VARCHAR}, 
+      	 #{boBudget,jdbcType=VARCHAR}, #{isProjectApproval,jdbcType=BIT}, #{projectApprovalTime,jdbcType=TIMESTAMP}, 
+      	 #{projectApprovalEndtime,jdbcType=TIMESTAMP}, #{boPrincipalCode,jdbcType=VARCHAR}, 
+       	 #{depEhrPk,jdbcType=VARCHAR}, #{dataSource,jdbcType=SMALLINT})
+	</insert>
+	
+	<delete id="delById" parameterType="java.lang.Long">
+		DELETE FROM conf_business_opportunity 
+		WHERE
+		ID=#{id,jdbcType=BIGINT}
+	</delete>
+	
+	<update id="update" parameterType="com.kedacom.expenses.model.baseconfig.ConfBusinessOpportunity">
+		update conf_business_opportunity
+    	set BO_CRM_ID = #{boCrmId,jdbcType=VARCHAR},
+      	BO_NAME = #{boName,jdbcType=VARCHAR},
+      	BO_CODE = #{boCode,jdbcType=VARCHAR},
+      	BO_BUDGET = #{boBudget,jdbcType=VARCHAR},
+      	IS_PROJECT_APPROVAL = #{isProjectApproval,jdbcType=BIT},
+      	PROJECT_APPROVAL_TIME = #{projectApprovalTime,jdbcType=TIMESTAMP},
+      	PROJECT_APPROVAL_ENDTIME = #{projectApprovalEndtime,jdbcType=TIMESTAMP},
+      	BO_PRINCIPAL_CODE = #{boPrincipalCode,jdbcType=VARCHAR},
+      	DEP_EHR_PK = #{depEhrPk,jdbcType=VARCHAR},
+      	DATA_SOURCE = #{dataSource,jdbcType=SMALLINT}
+    	where ID = #{id,jdbcType=BIGINT}
+	</update>
+
+	
+	<select id="getByCrmId" parameterType="java.lang.Long" resultMap="ConfBusinessOpportunity">
+		SELECT *from conf_business_opportunity
+		WHERE
+		BO_CRM_ID = #{boCrmId,jdbcType=VARCHAR}
+	</select>
+	
+	
+	<select id="getById" parameterType="java.lang.Long" resultMap="ConfBusinessOpportunity">
+		SELECT cbo.*,org.ORGNAME departmentName,org.ORGCODE departmentCode,user.FULLNAME boPrincipalName
+		FROM conf_business_opportunity cbo
+		left join sys_org org on cbo.DEP_EHR_PK=org.EHRPK 
+		left join sys_user user on cbo.BO_PRINCIPAL_CODE=user.USERCODE 
+		WHERE
+		ID = #{id,jdbcType=BIGINT}
+	</select>
+	
+	<select id="getAll" resultMap="ConfBusinessOpportunity">
+		SELECT cbo.*,org.ORGNAME departmentName,org.ORGCODE departmentCode,user.FULLNAME boPrincipalName
+		FROM conf_business_opportunity cbo
+		left join sys_org org on cbo.DEP_EHR_PK=org.EHRPK 
+		left join sys_user user on cbo.BO_PRINCIPAL_CODE=user.USERCODE 
+		<include refid="dynamicWhere" />
+		<if test="@Ognl@isNotEmpty(orderField)">
+		order by ${orderField} ${orderSeq}
+		</if>
+		<if test="@Ognl@isEmpty(orderField)">
+		order by id  desc
+		</if>
+	</select>
+
+	<select id="getAllByOtherTaker" resultMap="ConfBusinessOpportunity" parameterType="java.lang.Long">
+		SELECT cbo.*
+		FROM conf_business_opportunity cbo
+		left join conf_other_taker cotaker on cbo.id = cotaker.business_id
+		where cotaker.type = 2
+		and cotaker.user_id = #{userId,jdbcType=NUMERIC}
+		order by id  desc
+	</select>
+	
+</mapper>

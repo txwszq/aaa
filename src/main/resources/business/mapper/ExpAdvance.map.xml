@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.kedacom.expenses.model.expenses.ExpAdvance">
+	<resultMap id="ExpAdvance" type="com.kedacom.expenses.model.expenses.ExpAdvance">
+			<id property="id" column="id" jdbcType="NUMERIC"/>
+			<result column="adv_name" property="advName" jdbcType="VARCHAR"/>
+			<result column="processes_id" property="processesId" jdbcType="NUMERIC"/>
+			<result column="bill_type" property="billType" jdbcType="NUMERIC"/>
+			<result column="bill_code" property="billCode" jdbcType="VARCHAR"/>
+			<result column="applyer_id" property="applyerId" jdbcType="NUMERIC"/>
+			<result column="applyer_name" property="applyerName" jdbcType="VARCHAR"/>
+			<result column="apply_dept_id" property="applyDeptId" jdbcType="NUMERIC"/>
+			<result column="apply_dept_name" property="applyDeptName" jdbcType="VARCHAR"/>
+			<result column="bill_state" property="billState" jdbcType="NUMERIC"/>
+			<result column="curr_advance_amount" property="currAdvanceAmount" jdbcType="NUMERIC"/>
+			<result column="expert_bus" property="expertBus" jdbcType="NUMERIC"/>
+			<result column="descipt" property="descipt" jdbcType="VARCHAR"/>
+			<result column="purpose" property="purpose" jdbcType="VARCHAR"/>
+			<result column="balance_amount" property="balanceAmount" jdbcType="NUMERIC"/>
+			<result column="approver_id" property="approverId" jdbcType="NUMERIC"/>
+			<result column="approve_date" property="approveDate" jdbcType="TIMESTAMP"/>
+			<result column="approve_note" property="approveNote" jdbcType="VARCHAR"/>
+			<result column="is_finish" property="isFinish" jdbcType="NUMERIC"/>
+			<result column="datasource" property="dataSource" jdbcType="NUMERIC"/>
+			<result column="residual_amount" property="residualAmount" jdbcType="NUMERIC"/>
+			<result column="conf_amount" property="confAmount" jdbcType="NUMERIC"/>
+			<result column="createby" property="createby" jdbcType="NUMERIC"/>
+			<result column="createtime" property="createtime" jdbcType="TIMESTAMP"/>
+			<result column="updatetime" property="updatetime" jdbcType="TIMESTAMP"/>
+			<result column="updateby" property="updateby" jdbcType="NUMERIC"/>
+			<association property="expAdvHis" column="id" select="com.kedacom.expenses.model.expenses.ExpAdvanceHis.getByExpAdv" ></association>
+	</resultMap>
+	
+	<sql id="columns">
+		id ,adv_name,processes_id ,bill_type ,bill_code ,applyer_id ,applyer_name ,apply_dept_id ,apply_dept_name ,bill_state ,curr_advance_amount ,expert_bus ,descipt ,purpose ,balance_amount ,approver_id ,approve_date ,approve_note ,is_finish ,datasource,residual_amount ,conf_amount ,createby ,createtime ,updatetime ,updateby 
+	</sql>
+	
+	
+	
+	
+	<sql id="dynamicWhere">
+		<where>
+				<if test="@Ognl@isNotEmpty(advName)"> AND adv_name LIKE '%${advName}%' </if>
+				<if test="@Ognl@isNotEmpty(processesId)"> AND processes_id = #{processesId} </if>
+				<if test="@Ognl@isNotEmpty(billType)"> AND bill_type = #{billType} </if>
+				<if test="@Ognl@isNotEmpty(billCode)"> AND bill_code LIKE '%${billCode}%' </if>
+				<if test="@Ognl@isNotEmpty(applyerId)"> AND applyer_id = #{applyerId} </if>
+				<if test="@Ognl@isNotEmpty(applyerName)"> AND applyer_name LIKE '%${applyerName}%' </if>
+				<if test="@Ognl@isNotEmpty(applyDeptId)"> AND apply_dept_id = #{applyDeptId} </if>
+				<if test="@Ognl@isNotEmpty(applyDeptName)"> AND apply_dept_name LIKE '%${applyDeptName}%' </if>
+				<if test="@Ognl@isNotEmpty(billState)"> AND bill_state = #{billState} </if>
+				<if test="@Ognl@isNotEmpty(currAdvanceAmount)"> AND curr_advance_amount = #{currAdvanceAmount} </if>
+				<if test="@Ognl@isNotEmpty(expertBus)"> AND expert_bus = #{expertBus} </if>
+				<if test="@Ognl@isNotEmpty(descipt)"> AND descipt LIKE '%${descipt}%' </if>
+				<if test="@Ognl@isNotEmpty(purpose)"> AND purpose LIKE '%${purpose}%' </if>
+				<if test="@Ognl@isNotEmpty(balanceAmount)"> AND balance_amount = #{balanceAmount} </if>
+				<if test="@Ognl@isNotEmpty(approverId)"> AND approver_id = #{approverId} </if>
+				<if test="@Ognl@isNotEmpty(beginapproveDate)"> AND approve_date  >=#{beginapproveDate,jdbcType=DATE} </if>
+				<if test="@Ognl@isNotEmpty(endapproveDate)"> AND approve_date &lt;=#{endapproveDate,jdbcType=DATE}</if>
+				<if test="@Ognl@isNotEmpty(approveNote)"> AND approve_note LIKE '%${approveNote}%' </if>
+				<if test="@Ognl@isNotEmpty(isFinish)"> AND is_finish = #{isFinish} </if>
+				<if test="@Ognl@isNotEmpty(datasource)"> AND datasource = #{dataSource} </if>
+				<if test="@Ognl@isNotEmpty(residualAmount)"> AND residual_amount = #{residualAmount} </if>
+				<if test="@Ognl@isNotEmpty(confAmount)"> AND conf_amount = #{confAmount} </if>
+				<if test="@Ognl@isNotEmpty(createby)"> AND createby = #{createby} </if>
+				<if test="@Ognl@isNotEmpty(begincreatetime)"> AND createtime  >=#{begincreatetime,jdbcType=DATE} </if>
+				<if test="@Ognl@isNotEmpty(endcreatetime)"> AND createtime &lt;=#{endcreatetime,jdbcType=DATE}</if>
+				<if test="@Ognl@isNotEmpty(beginupdatetime)"> AND updatetime  >=#{beginupdatetime,jdbcType=DATE} </if>
+				<if test="@Ognl@isNotEmpty(endupdatetime)"> AND updatetime &lt;=#{endupdatetime,jdbcType=DATE}</if>
+				<if test="@Ognl@isNotEmpty(updateby)"> AND updateby = #{updateby} </if>
+		</where>
+	</sql>
+	
+	<insert id="add" parameterType="com.kedacom.expenses.model.expenses.ExpAdvance"  useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO exp_advance
+		(<include refid="columns"/>)
+		VALUES
+		(#{id,jdbcType=NUMERIC},#{advName,jdbcType=VARCHAR},#{processesId,jdbcType=NUMERIC},#{billType,jdbcType=NUMERIC},#{billCode,jdbcType=VARCHAR},
+		#{applyerId,jdbcType=NUMERIC},#{applyerName,jdbcType=VARCHAR},#{applyDeptId,jdbcType=NUMERIC},
+		#{applyDeptName,jdbcType=VARCHAR},#{billState,jdbcType=NUMERIC},#{currAdvanceAmount,jdbcType=NUMERIC},
+		#{expertBus,jdbcType=NUMERIC},#{descipt,jdbcType=VARCHAR},#{purpose,jdbcType=VARCHAR},#{balanceAmount,jdbcType=NUMERIC},
+		#{approverId,jdbcType=NUMERIC},#{approveDate,jdbcType=TIMESTAMP},#{approveNote,jdbcType=VARCHAR},#{isFinish,jdbcType=NUMERIC},#{dataSource,jdbcType=NUMERIC},
+		#{residualAmount,jdbcType=NUMERIC},#{confAmount,jdbcType=NUMERIC},#{createby,jdbcType=NUMERIC},#{createtime,jdbcType=TIMESTAMP},
+		#{updatetime,jdbcType=TIMESTAMP},#{updateby,jdbcType=NUMERIC})
+	</insert>
+	
+	<delete id="delById" parameterType="java.lang.Long">
+		DELETE FROM exp_advance 
+		WHERE
+		id=#{id}
+	</delete>
+	
+	
+	<update id="update" parameterType="com.kedacom.expenses.model.expenses.ExpAdvance">
+		UPDATE exp_advance  SET
+		id=#{id,jdbcType=NUMERIC},
+		adv_name = #{advName,jdbcType=VARCHAR},
+		processes_id=#{processesId,jdbcType=NUMERIC},
+		bill_type=#{billType,jdbcType=NUMERIC},
+		bill_code=#{billCode,jdbcType=VARCHAR},
+		applyer_id=#{applyerId,jdbcType=NUMERIC},
+		applyer_name=#{applyerName,jdbcType=VARCHAR},
+		apply_dept_id=#{applyDeptId,jdbcType=NUMERIC},
+		apply_dept_name=#{applyDeptName,jdbcType=VARCHAR},
+		bill_state=#{billState,jdbcType=NUMERIC},
+		curr_advance_amount=#{currAdvanceAmount,jdbcType=NUMERIC},
+		expert_bus=#{expertBus,jdbcType=NUMERIC},
+		descipt=#{descipt,jdbcType=VARCHAR},
+		purpose=#{purpose,jdbcType=VARCHAR},
+		balance_amount=#{balanceAmount,jdbcType=NUMERIC},
+		approver_id=#{approverId,jdbcType=NUMERIC},
+		approve_date=#{approveDate,jdbcType=TIMESTAMP},
+		approve_note=#{approveNote,jdbcType=VARCHAR},
+		is_finish=#{isFinish,jdbcType=NUMERIC},
+		residual_amount=#{residualAmount,jdbcType=NUMERIC},
+		datasource=#{dataSource,jdbcType=NUMERIC},
+		conf_amount=#{confAmount,jdbcType=NUMERIC},
+		createby=#{createby,jdbcType=NUMERIC},
+		createtime=#{createtime,jdbcType=TIMESTAMP},
+		updatetime=#{updatetime,jdbcType=TIMESTAMP},
+		updateby=#{updateby,jdbcType=NUMERIC}
+		WHERE
+		id=#{id}
+	</update>
+	
+	
+	<select id="getById" parameterType="java.lang.Long" resultMap="ExpAdvance" useCache="true">
+		SELECT <include refid="columns"/>
+		FROM exp_advance
+		WHERE id=#{id}
+	</select>
+	
+	<select id="getAll" resultMap="ExpAdvance" >
+		SELECT <include refid="columns"/>
+		FROM exp_advance   
+		<include refid="dynamicWhere" />
+		<if test="@Ognl@isNotEmpty(orderField)">
+		order by ${orderField} ${orderSeq}
+		</if>
+		<if test="@Ognl@isEmpty(orderField)">
+		order by id  desc
+		</if>
+	</select>
+	
+	
+		<select id="getAllAsc" resultMap="ExpAdvance" useCache="false">
+		SELECT <include refid="columns"/>
+		FROM exp_advance   
+		<where>
+			<if test="@Ognl@isNotEmpty(applyerId)"> AND applyer_id = #{applyerId} </if>
+			<if test="@Ognl@isNotEmpty(billType)"> AND bill_type = #{billType} </if>
+			<if test="@Ognl@isNotEmpty(isFinish)"> AND is_finish = #{isFinish} </if>
+			<if test="@Ognl@isNotEmpty(billState)"> AND bill_state != #{billState}</if>
+		</where> 
+		<if test="@Ognl@isNotEmpty(orderField)">
+		order by ${orderField} ${orderSeq}
+		</if>
+		<if test="@Ognl@isEmpty(orderField)">
+		order by createtime  asc
+		</if>
+	</select>
+	
+	
+	<select id="getUserInfo" resultMap="ExpAdvance" parameterType="java.lang.Long">
+			select T1.userid as applyer_id,T1.fullname  as applyer_name , T3.orgid as apply_dept_id,T3.orgname  as  apply_dept_name from sys_user T1 
+			left join sys_user_org T2 on T1.userid=t2.userid
+			left join sys_org T3 on T2.orgid=T3.orgid  
+			where T1.userid= #{id,jdbcType=BIGINT}  and  T2.ISPRIMARY = 1
+	</select>
+	
+	
+			<!-- 查询未完成的审批没通过的预支单 -->
+	<select id="getNoFinishMatch"  resultType="java.lang.Float"  parameterType="java.lang.Long">
+		select sum(curr_advance_amount)  as amount  from exp_advance 
+		where is_finish=0   and bill_type=2  and bill_state  &lt; 3
+		and  applyer_id=#{applyer_id,jdbcType=BIGINT}
+	</select>
+	
+</mapper>

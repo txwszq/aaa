@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.kedacom.expenses.model.expenses.ExpTransform">
+	<resultMap id="ExpTransform" type="com.kedacom.expenses.model.expenses.ExpTransform">
+			<result column="id" property="id" jdbcType="NUMERIC"/>
+			<result column="bill_type" property="billType" jdbcType="NUMERIC"/>
+			<result column="happened_amount" property="happenedAmount" jdbcType="NUMERIC"/>
+			<result column="is_turn" property="isTurn" jdbcType="NUMERIC"/>
+			<result column="createby" property="createby" jdbcType="NUMERIC"/>
+			<result column="createtime" property="createtime" jdbcType="TIMESTAMP"/>
+			<result column="updatetime" property="updatetime" jdbcType="TIMESTAMP"/>
+			<result column="updateby" property="updateby" jdbcType="NUMERIC"/>
+	</resultMap>
+	
+	<sql id="columns">
+		id ,bill_type ,happened_amount ,is_turn ,createby ,createtime ,updatetime ,updateby 
+	</sql>
+	
+	<sql id="dynamicWhere">
+		<where>
+				<if test="@Ognl@isNotEmpty(id)"> AND id = #{id} </if>
+				<if test="@Ognl@isNotEmpty(bill_type)"> AND bill_type = #{bill_type} </if>
+				<if test="@Ognl@isNotEmpty(happened_amount)"> AND happened_amount = #{happened_amount} </if>
+				<if test="@Ognl@isNotEmpty(is_turn)"> AND is_turn = #{is_turn} </if>
+				<if test="@Ognl@isNotEmpty(createby)"> AND createby = #{createby} </if>
+				<if test="@Ognl@isNotEmpty(begincreatetime)"> AND createtime  >=#{begincreatetime,jdbcType=DATE} </if>
+				<if test="@Ognl@isNotEmpty(endcreatetime)"> AND createtime &lt;=#{endcreatetime,jdbcType=DATE}</if>
+				<if test="@Ognl@isNotEmpty(beginupdatetime)"> AND updatetime  >=#{beginupdatetime,jdbcType=DATE} </if>
+				<if test="@Ognl@isNotEmpty(endupdatetime)"> AND updatetime &lt;=#{endupdatetime,jdbcType=DATE}</if>
+				<if test="@Ognl@isNotEmpty(updateby)"> AND updateby = #{updateby} </if>
+		</where>
+	</sql>
+	
+	<insert id="add" parameterType="com.kedacom.expenses.model.expenses.ExpTransform"  useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO exp_transform
+		(<include refid="columns"/>)
+		VALUES
+		(#{id,jdbcType=NUMERIC},#{bill_type,jdbcType=NUMERIC},#{happened_amount,jdbcType=NUMERIC},#{is_turn,jdbcType=NUMERIC},#{createby,jdbcType=NUMERIC},#{createtime,jdbcType=TIMESTAMP},#{updatetime,jdbcType=TIMESTAMP},#{updateby,jdbcType=NUMERIC})
+	</insert>
+	
+	<delete id="delById" parameterType="java.lang.Long">
+		DELETE FROM exp_transform 
+		WHERE
+		ID=#{id,jdbcType=BIGINT}
+	</delete>
+
+	
+	<update id="update" parameterType="com.kedacom.expenses.model.expenses.ExpTransform">
+		UPDATE exp_transform  SET
+		id=#{id,jdbcType=NUMERIC},
+		bill_type=#{bill_type,jdbcType=NUMERIC},
+		happened_amount=#{happened_amount,jdbcType=NUMERIC},
+		is_turn=#{is_turn,jdbcType=NUMERIC},
+		createby=#{createby,jdbcType=NUMERIC},
+		createtime=#{createtime,jdbcType=TIMESTAMP},
+		updatetime=#{updatetime,jdbcType=TIMESTAMP},
+		updateby=#{updateby,jdbcType=NUMERIC}
+		where id = #{id,jdbcType=BIGINT}
+	</update>
+	
+
+	<select id="getById" parameterType="java.lang.Long" resultMap="ExpTransform" useCache="true">
+		SELECT <include refid="columns"/>
+		FROM exp_transform
+		WHERE 
+		ID=#{id,jdbcType=BIGINT}
+	</select>
+
+	
+	<select id="getAll" resultMap="ExpTransform" useCache="false">
+		SELECT <include refid="columns"/>
+		FROM exp_transform   
+		<include refid="dynamicWhere" />
+		<if test="@Ognl@isNotEmpty(orderField)">
+		order by ${orderField} ${orderSeq}
+		</if>
+		<if test="@Ognl@isEmpty(orderField)">
+		order by   desc
+		</if>
+	</select>
+</mapper>

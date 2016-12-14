@@ -1,0 +1,169 @@
+11:37:55.546 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+11:37:57.515 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+14:35:23.171 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+14:35:24.562 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+14:35:25.359 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+14:35:25.703 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+14:35:26.140 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+14:35:26.406 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+14:35:26.734 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+14:35:27.156 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+14:35:27.390 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+14:35:27.687 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+14:35:27.859 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+14:35:28.234 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+14:35:28.484 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+14:35:28.828 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+14:35:29.156 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+14:35:29.578 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+14:51:55.765 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+14:51:57.687 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+14:52:31.921 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+14:52:33.343 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+14:54:35.062 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+14:54:36.859 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+14:54:37.468 [main] ERROR o.s.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@a2970f] to prepare test instance [com.kedacom.expenses.service.expenses.ExpPaymentTest@6b74c8]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:308) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:333) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:220) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:301) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:303) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:240) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:180) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197) [.cp/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'confActivityService' defined in file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\com\kedacom\expenses\service\baseconfig\ConfActivityService.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanIsAbstractException: Error creating bean with name 'transactionInterceptor': Bean definition is abstract
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:527) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:574) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanIsAbstractException: Error creating bean with name 'transactionInterceptor': Bean definition is abstract
+	at org.springframework.beans.factory.support.AbstractBeanFactory.checkMergedBeanDefinition(AbstractBeanFactory.java:1182) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:275) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.resolveInterceptorNames(AbstractAutoProxyCreator.java:558) ~[spring-aop-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.buildAdvisors(AbstractAutoProxyCreator.java:520) ~[spring-aop-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.createProxy(AbstractAutoProxyCreator.java:463) ~[spring-aop-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:362) ~[spring-aop-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:322) ~[spring-aop-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:407) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1418) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 36 common frames omitted
+14:54:37.734 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+14:54:38.250 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+14:54:38.281 [main] ERROR o.s.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@a2970f] to prepare test instance [com.kedacom.expenses.service.expenses.ExpPaymentTest@247cc2]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:308) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:333) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:220) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:301) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:303) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:240) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:180) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197) [.cp/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'confActivityService' defined in file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\com\kedacom\expenses\service\baseconfig\ConfActivityService.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanIsAbstractException: Error creating bean with name 'transactionInterceptor': Bean definition is abstract
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:527) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:574) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanIsAbstractException: Error creating bean with name 'transactionInterceptor': Bean definition is abstract
+	at org.springframework.beans.factory.support.AbstractBeanFactory.checkMergedBeanDefinition(AbstractBeanFactory.java:1182) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:275) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.resolveInterceptorNames(AbstractAutoProxyCreator.java:558) ~[spring-aop-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.buildAdvisors(AbstractAutoProxyCreator.java:520) ~[spring-aop-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.createProxy(AbstractAutoProxyCreator.java:463) ~[spring-aop-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:362) ~[spring-aop-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:322) ~[spring-aop-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:407) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1418) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 36 common frames omitted
+14:56:47.875 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+14:56:49.859 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+14:56:51.687 [main] WARN  o.s.aop.framework.Cglib2AopProxy - Unable to proxy method [public final void org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests.setApplicationContext(org.springframework.context.ApplicationContext)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+14:56:51.765 [main] WARN  o.s.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener@b74525] to process 'after' execution for test: method [public void com.kedacom.expenses.service.expenses.ExpPaymentTest.testAdd()], instance [com.kedacom.expenses.service.expenses.ExpPaymentTest@1cc01a], exception [org.apache.ibatis.exceptions.PersistenceException: 
+### Error updating database.  Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'take_dept_name' at row 1
+### The error may involve com.kedacom.expenses.model.expenses.ExpPaymentB.add-Inline
+### The error occurred while setting parameters
+### Cause: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'take_dept_name' at row 1]
+org.springframework.transaction.UnexpectedRollbackException: Transaction rolled back because it has been marked as rollback-only
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:717) ~[spring-tx-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener$TransactionContext.endTransaction(TransactionalTestExecutionListener.java:515) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.endTransaction(TransactionalTestExecutionListener.java:290) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.afterTestMethod(TransactionalTestExecutionListener.java:183) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContextManager.afterTestMethod(TestContextManager.java:426) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:90) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:240) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:180) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197) [.cp/:na]

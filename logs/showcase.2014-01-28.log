@@ -1,0 +1,2 @@
+09:37:03.703 [main] WARN  o.s.b.f.p.FailFastProblemReporter - Configuration problem: Overriding globally registered AuthenticationManager
+Offending resource: URL [jar:file:/E:/Java/maven/repos/com/kedacom/kedacom-security/1.0.3-SNAPSHOT/kedacom-security-1.0.3-SNAPSHOT.jar!/conf/app-security.xml]

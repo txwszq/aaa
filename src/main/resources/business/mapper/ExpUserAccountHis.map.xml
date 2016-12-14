@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.kedacom.expenses.model.expenses.ExpUserAccountHis">
+	<resultMap id="ExpUserAccountHis" type="com.kedacom.expenses.model.expenses.ExpUserAccountHis">
+			<id property="id" column="id" jdbcType="NUMERIC"/>
+			<result column="user_account_id" property="userAccountId" jdbcType="NUMERIC"/>
+			<result column="bill_id" property="billId" jdbcType="NUMERIC"/>
+			<result column="user_id" property="userId" jdbcType="NUMERIC"/>
+			<result column="bus_type" property="busType" jdbcType="NUMERIC"/>
+			<result column="happen_amount" property="happenAmount" jdbcType="NUMERIC"/>
+			<result column="happen_date" property="happenDate" jdbcType="TIMESTAMP"/>
+			<result column="remark" property="remark" jdbcType="VARCHAR"/>
+	</resultMap>
+	
+	<sql id="columns">
+		id ,user_account_id ,bill_id ,user_id ,bus_type ,happen_amount ,happen_date ,remark
+	</sql>
+	
+	<sql id="dynamicWhere">
+		<where>
+				<if test="@Ognl@isNotEmpty(userAccountId)"> AND user_account_id = #{userAccountId} </if>
+				<if test="@Ognl@isNotEmpty(billId"> AND bill_id = #{billId} </if>
+				<if test="@Ognl@isNotEmpty(userId)"> AND user_id = #{userId} </if>
+				<if test="@Ognl@isNotEmpty(busType)"> AND bus_type = #{busType} </if>
+				<if test="@Ognl@isNotEmpty(happenAmount)"> AND happen_amount = #{happenAmount} </if>
+				<if test="@Ognl@isNotEmpty(beginhappenDate)"> AND happen_date  >=#{beginhappenDate,jdbcType=DATE} </if>
+				<if test="@Ognl@isNotEmpty(endhappenDate)"> AND happen_date &lt;=#{endhappenDate,jdbcType=DATE}</if>
+				<if test="@Ognl@isNotEmpty(remark)"> AND remark LIKE '%${remark}%' </if>
+		</where>
+	</sql>
+	
+	<insert id="add" parameterType="com.kedacom.expenses.model.expenses.ExpUserAccountHis"  useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO exp_user_account_his
+		(<include refid="columns"/>)
+		VALUES
+		(#{id,jdbcType=NUMERIC},#{userAccountId,jdbcType=NUMERIC},#{billId,jdbcType=NUMERIC},
+		#{userId,jdbcType=NUMERIC},#{busType,jdbcType=NUMERIC},#{happenAmount,jdbcType=NUMERIC},
+		#{happenDate,jdbcType=TIMESTAMP},#{remark,jdbcType=VARCHAR})
+	</insert>
+	
+	<delete id="delById" parameterType="java.lang.Long">
+		DELETE FROM exp_user_account_his 
+		WHERE
+		id=#{id}
+	</delete>
+	
+	
+	<update id="update" parameterType="com.kedacom.expenses.model.expenses.ExpUserAccountHis">
+		UPDATE exp_user_account_his  SET
+		id=#{id,jdbcType=NUMERIC},
+		user_account_id=#{userAccountId,jdbcType=NUMERIC},
+		bill_id=#{billId,jdbcType=NUMERIC},
+		user_id=#{userId,jdbcType=NUMERIC},
+		bus_type=#{busType,jdbcType=NUMERIC},
+		happen_amount=#{happenAmount,jdbcType=NUMERIC},
+		happen_date=#{happenDate,jdbcType=TIMESTAMP},
+		remark=#{remark,jdbcType=VARCHAR}
+		WHERE
+		id=#{id}
+	</update>
+	
+	
+	<select id="getById" parameterType="java.lang.Long" resultMap="ExpUserAccountHis" useCache="true">
+		SELECT <include refid="columns"/>
+		FROM exp_user_account_his
+		WHERE id=#{id}
+	</select>
+	
+	<select id="getAll" resultMap="ExpUserAccountHis" useCache="false">
+		SELECT <include refid="columns"/>
+		FROM exp_user_account_his   
+		<include refid="dynamicWhere" />
+		<if test="@Ognl@isNotEmpty(orderField)">
+		order by ${orderField} ${orderSeq}
+		</if>
+		<if test="@Ognl@isEmpty(orderField)">
+		order by id  desc
+		</if>
+	</select>
+</mapper>

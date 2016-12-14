@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.kedacom.expenses.model.expenses.ExpPaymentB">
+	<resultMap id="ExpPaymentB" type="com.kedacom.expenses.model.expenses.ExpPaymentB">
+			<id column="id" property="id" jdbcType="NUMERIC"/>
+			<result column="bill_state" property="billState" jdbcType="NUMERIC"/>
+			<result column="approve_note" property="approveNote" jdbcType="VARCHAR"/>
+			<result column="expenses_h_id" property="expensesHID" jdbcType="NUMERIC"/>
+			<result column="num" property="num" jdbcType="NUMERIC"/>
+			<result column="begin_date" property="beginDate" jdbcType="TIMESTAMP"/>
+			<result column="end_date" property="endDate" jdbcType="TIMESTAMP"/>
+			<result column="day_num" property="dayNum" jdbcType="NUMERIC"/>
+			<result column="cost_subject_c" property="costSubjectC" jdbcType="VARCHAR"/>
+			<result column="cost_subject_p" property="costSubjectP" jdbcType="VARCHAR"/>
+			<result column="real_cost_subject_c" property="realCostSubjectC" jdbcType="VARCHAR"/>
+			<result column="real_cost_subject_p" property="realCostSubjectP" jdbcType="VARCHAR"/>
+			<result column="amount" property="amount" jdbcType="NUMERIC"/>
+			<result column="act_id" property="actId" jdbcType="NUMERIC"/>
+			<result column="bus_id" property="busId" jdbcType="NUMERIC"/>
+			<result column="cus_id" property="cusId" jdbcType="NUMERIC"/>
+			<result column="project_src_type" property="projectSrcType" jdbcType="NUMERIC"/>
+			<result column="project_code" property="projectCode" jdbcType="VARCHAR"/>
+			<result column="project_name" property="projectName" jdbcType="VARCHAR"/>
+			<result column="server_code" property="serverCode" jdbcType="VARCHAR"/>
+			<result column="take_dept_id" property="takeDeptId" jdbcType="NUMERIC"/>
+			<result column="take_dept_name" property="takedeptname" jdbcType="VARCHAR"/>
+			<result column="cost_taker_id" property="costTakerId" jdbcType="NUMERIC"/>
+			<result column="cost_taker_name" property="costTakerName" jdbcType="VARCHAR"/>
+			<result column="descipt" property="descipt" jdbcType="VARCHAR"/>
+			<result column="is_pay" property="isPay" jdbcType="NUMERIC"/>
+			<result column="exp_pay_id" property="expPayId" jdbcType="NUMERIC"/>
+			<result column="is_leader2" property="isLeader2" jdbcType="NUMERIC"/>
+			<result column="createby" property="createby" jdbcType="NUMERIC"/>
+			<result column="createtime" property="createtime" jdbcType="TIMESTAMP"/>
+			<result column="updatetime" property="updatetime" jdbcType="TIMESTAMP"/>
+			<result column="updateby" property="updateby" jdbcType="NUMERIC"/>
+	</resultMap>
+	
+	
+	<resultMap id="LongList" type="java.lang.Long">
+	</resultMap>
+	
+	<resultMap id="Map" type="java.util.Map">
+	</resultMap>
+	<sql id="columns">
+		id ,bill_state ,approve_note ,expenses_h_id ,num ,begin_date ,end_date ,day_num ,cost_subject_c ,cost_subject_p ,real_cost_subject_c ,real_cost_subject_p ,amount ,act_id ,bus_id ,cus_id ,project_src_type ,project_code ,project_name ,server_code ,take_dept_id ,take_dept_name ,cost_taker_id ,cost_taker_name ,descipt ,is_pay ,exp_pay_id ,is_leader2 ,createby ,createtime ,updatetime ,updateby 
+	</sql>
+	
+	<sql id="dynamicWhere">
+		<where>
+				<if test="@Ognl@isNotEmpty(billState)"> AND bill_state = #{billState} </if>
+				<if test="@Ognl@isNotEmpty(approveNote)"> AND approve_note LIKE '%${approveNote}%' </if>
+				<if test="@Ognl@isNotEmpty(expensesHID)"> AND expenses_h_id = #{expensesHID} </if>
+				<if test="@Ognl@isNotEmpty(num)"> AND num = #{num} </if>
+				<if test="@Ognl@isNotEmpty(beginDate)"> AND begin_date  >=#{beginDate,jdbcType=DATE} </if>
+				<if test="@Ognl@isNotEmpty(endDate)"> AND begin_date &lt;=#{endDate,jdbcType=DATE}</if>
+				<if test="@Ognl@isNotEmpty(dayNum)"> AND day_num = #{dayNum} </if>
+				<if test="@Ognl@isNotEmpty(costSubjectC)"> AND cost_subject_c = #{costSubjectC} </if>
+				<if test="@Ognl@isNotEmpty(costSubjectP)"> AND cost_subject_p = #{costSubjectP} </if>
+				<if test="@Ognl@isNotEmpty(realCostSubjectC)"> AND real_cost_subject_c = #{realCostSubjectC} </if>
+				<if test="@Ognl@isNotEmpty(realCostSubjectP)"> AND real_cost_subject_p = #{realCostSubjectP} </if>
+				<if test="@Ognl@isNotEmpty(amount)"> AND amount = #{amount} </if>
+				<if test="@Ognl@isNotEmpty(actId)"> AND act_id = #{actId} </if>
+				<if test="@Ognl@isNotEmpty(busId)"> AND bus_id = #{busId} </if>
+				<if test="@Ognl@isNotEmpty(cusId)"> AND cus_id = #{cusId} </if>
+				<if test="@Ognl@isNotEmpty(projectSrcType)"> AND project_src_type = #{projectSrcType} </if>
+				<if test="@Ognl@isNotEmpty(projectCode)"> AND project_code LIKE '%${projectCode}%' </if>
+				<if test="@Ognl@isNotEmpty(projectName)"> AND project_name LIKE '%${projectName}%' </if>
+				<if test="@Ognl@isNotEmpty(serverCode)"> AND server_code LIKE '%${serverCode}%' </if>
+				<if test="@Ognl@isNotEmpty(takeDeptId)"> AND take_dept_id = #{takeDeptId} </if>
+				<if test="@Ognl@isNotEmpty(takedeptname)"> AND take_dept_name LIKE '%${takedeptname}%' </if>
+				<if test="@Ognl@isNotEmpty(costTakerId)"> AND cost_taker_id = #{costTakerId} </if>
+				<if test="@Ognl@isNotEmpty(costTakerName)"> AND cost_taker_name LIKE '%${costTakerName}%' </if>
+				<if test="@Ognl@isNotEmpty(descipt)"> AND descipt LIKE '%${descipt}%' </if>
+				<if test="@Ognl@isNotEmpty(isPay)"> AND is_pay = #{isPay} </if>
+				<if test="@Ognl@isNotEmpty(expPayId)"> AND exp_pay_id = #{expPayId} </if>
+				<if test="@Ognl@isNotEmpty(isLeader2)"> AND is_leader2 = #{isLeader2} </if>
+				<if test="@Ognl@isNotEmpty(createby)"> AND createby = #{createby} </if>
+				<if test="@Ognl@isNotEmpty(begincreatetime)"> AND createtime  >=#{begincreatetime,jdbcType=DATE} </if>
+				<if test="@Ognl@isNotEmpty(endcreatetime)"> AND createtime &lt;=#{endcreatetime,jdbcType=DATE}</if>
+				<if test="@Ognl@isNotEmpty(beginupdatetime)"> AND updatetime  >=#{beginupdatetime,jdbcType=DATE} </if>
+				<if test="@Ognl@isNotEmpty(endupdatetime)"> AND updatetime &lt;=#{endupdatetime,jdbcType=DATE}</if>
+				<if test="@Ognl@isNotEmpty(updateby)"> AND updateby = #{updateby} </if>
+		</where>
+	</sql>
+	
+	<insert id="add" parameterType="com.kedacom.expenses.model.expenses.ExpPaymentB">
+		INSERT INTO exp_payment_b
+		(<include refid="columns"/>)
+		VALUES
+		(#{id,jdbcType=NUMERIC},#{billState,jdbcType=NUMERIC},#{approveNote,jdbcType=VARCHAR},#{expensesHID,jdbcType=NUMERIC},#{num,jdbcType=NUMERIC},#{beginDate,jdbcType=TIMESTAMP},#{endDate,jdbcType=TIMESTAMP},#{dayNum,jdbcType=NUMERIC},#{costSubjectC,jdbcType=NUMERIC},#{costSubjectP,jdbcType=NUMERIC},#{realCostSubjectC,jdbcType=NUMERIC},#{realCostSubjectP,jdbcType=NUMERIC},#{amount,jdbcType=NUMERIC},#{actId,jdbcType=NUMERIC},#{busId,jdbcType=NUMERIC},#{cusId,jdbcType=NUMERIC},#{projectSrcType,jdbcType=NUMERIC},#{projectCode,jdbcType=VARCHAR},#{projectName,jdbcType=VARCHAR},#{serverCode,jdbcType=VARCHAR},#{takeDeptId,jdbcType=NUMERIC},#{takedeptname,jdbcType=VARCHAR},#{costTakerId,jdbcType=NUMERIC},#{costTakerName,jdbcType=VARCHAR},#{descipt,jdbcType=VARCHAR},#{isPay,jdbcType=NUMERIC},#{expPayId,jdbcType=NUMERIC},#{isLeader2,jdbcType=NUMERIC},#{createby,jdbcType=NUMERIC},#{createtime,jdbcType=TIMESTAMP},#{updatetime,jdbcType=TIMESTAMP},#{updateby,jdbcType=NUMERIC})
+	</insert>
+	
+	<delete id="delById" parameterType="java.lang.Long">
+		DELETE FROM exp_payment_b 
+		WHERE
+		id=#{id}
+	</delete>
+	
+	<delete id="delByExpensesHId" parameterType="java.lang.Long">
+		DELETE FROM exp_payment_b 
+		WHERE expenses_h_id=#{expensesHId}
+	</delete>
+	
+	<update id="update" parameterType="com.kedacom.expenses.model.expenses.ExpPaymentB">
+		UPDATE exp_payment_b  SET
+		id=#{id,jdbcType=NUMERIC},
+		bill_state=#{billState,jdbcType=NUMERIC},
+		approve_note=#{approveNote,jdbcType=VARCHAR},
+		expenses_h_id=#{expensesHID,jdbcType=NUMERIC},
+		num=#{num,jdbcType=NUMERIC},
+		begin_date=#{beginDate,jdbcType=TIMESTAMP},
+		end_date=#{endDate,jdbcType=TIMESTAMP},
+		day_num=#{dayNum,jdbcType=NUMERIC},
+		cost_subject_c=#{costSubjectC,jdbcType=NUMERIC},
+		cost_subject_p=#{costSubjectP,jdbcType=NUMERIC},
+		real_cost_subject_c=#{realCostSubjectC,jdbcType=NUMERIC},
+		real_cost_subject_p=#{realCostSubjectP,jdbcType=NUMERIC},
+		amount=#{amount,jdbcType=NUMERIC},
+		act_id=#{actId,jdbcType=NUMERIC},
+		bus_id=#{busId,jdbcType=NUMERIC},
+		cus_id=#{cusId,jdbcType=NUMERIC},
+		project_src_type=#{projectSrcType,jdbcType=NUMERIC},
+		project_code=#{projectCode,jdbcType=VARCHAR},
+		project_name=#{projectName,jdbcType=VARCHAR},
+		server_code=#{serverCode,jdbcType=VARCHAR},
+		take_dept_id=#{takeDeptId,jdbcType=NUMERIC},
+		take_dept_name=#{takedeptname,jdbcType=VARCHAR},
+		cost_taker_id=#{costTakerId,jdbcType=NUMERIC},
+		cost_taker_name=#{costTakerName,jdbcType=VARCHAR},
+		descipt=#{descipt,jdbcType=VARCHAR},
+		is_pay=#{isPay,jdbcType=NUMERIC},
+		exp_pay_id=#{expPayId,jdbcType=NUMERIC},
+		is_leader2=#{isLeader2,jdbcType=NUMERIC},
+		createby=#{createby,jdbcType=NUMERIC},
+		createtime=#{createtime,jdbcType=TIMESTAMP},
+		updatetime=#{updatetime,jdbcType=TIMESTAMP},
+		updateby=#{updateby,jdbcType=NUMERIC}
+		WHERE
+		id=#{id}
+	</update>
+	
+	
+	<select id="getById" parameterType="java.lang.Long" resultMap="ExpPaymentB" useCache="true">
+		SELECT <include refid="columns"/>
+		FROM exp_payment_b
+		WHERE id=#{id}
+	</select>
+	
+	<!-- 获取主单据ID的所有子单据ID -->
+	<select id="getIdsByMainId" parameterType="java.lang.Long" resultMap="LongList">
+		SELECT id
+		FROM exp_payment_b
+		WHERE expenses_h_id=#{expensesHID}
+	</select>
+	
+	<!-- 获取此次报销单总金额 -->
+	<select id="getSum" parameterType="java.lang.Long" >
+		SELECT IFNULL(SUM(amount),0) AS amount
+		FROM exp_payment_b
+		WHERE expenses_h_id=#{id}
+	</select>
+	
+	<!-- 更新为不通过 -->
+	<update id="upReject" parameterType="java.util.List">
+		UPDATE exp_payment_b  SET
+		bill_state=0
+		where id in 
+		<foreach item="id" collection="list" open="(" separator="," close=")">  
+                     #{id}  
+       </foreach>   
+	</update>
+	
+	<!-- 更新为通过 -->
+	<update id="upAgree" parameterType="java.util.List">
+		UPDATE exp_payment_b  SET
+		bill_state=1
+		where id in 
+		<foreach item="id" collection="list" open="(" separator="," close=")">  
+                     #{id}  
+       </foreach>   
+	</update>
+	
+	<select id="getAll" resultMap="ExpPaymentB" useCache="false">
+		SELECT <include refid="columns"/>
+		FROM exp_payment_b   
+		<include refid="dynamicWhere" />
+		<if test="@Ognl@isNotEmpty(orderField)">
+		order by ${orderField} ${orderSeq}
+		</if>
+		<if test="@Ognl@isEmpty(orderField)">
+		order by id  desc
+		</if>
+	</select>
+	
+	<!-- 获取主单据ID的所有子单据 -->
+	<select id="getListByMainId" resultMap="Map" parameterType="java.lang.Long" useCache="true">
+		SELECT
+		  eb.id,
+		  eb.bill_state          AS billState,
+		  eb.approve_note        AS approveNote,
+		  eb.expenses_h_id       AS expensesHID,
+		  eb.num                 AS num,
+		  eb.begin_date          AS beginDate,
+		  eb.end_date            AS endDate,
+		  eb.day_num             AS dayNum,
+		  eb.cost_subject_c      AS costSubjectC,
+		  eb.cost_subject_p      AS costSubjectP,
+		  eb.real_cost_subject_c AS realCostSubjectC,
+		  eb.real_cost_subject_p AS realCostSubjectP,
+		  eb.amount              AS amount,
+		  eb.act_id              AS actId,
+		  ca.act_desc            AS actName,
+		  eb.bus_id              AS busId,
+		  cbo.BO_NAME            AS busName,
+		  eb.cus_id              AS cusId,
+		  cc.CLIENT_NAME         AS cusName,
+		  eb.project_src_type    AS projectSrcType,
+		  eb.project_code        AS projectCode,
+		  eb.project_name        AS projectName,
+		  eb.server_code         AS serverCode,
+		  eb.take_dept_id        AS takeDeptId,
+		  eb.take_dept_name      AS takeDeptName,
+		  eb.cost_taker_id       AS costTakerId,
+		  eb.cost_taker_name     AS costTakerName,
+		  eb.descipt             AS descipt,
+		  eb.is_pay              AS isPay,
+		  eb.exp_pay_id          AS expPayId,
+		  eb.is_leader2          AS isLeader2,
+		  eb.createBy            AS createBy,
+		  eb.createtime          AS createtime,
+		  eb.updatetime          AS updatetime,
+		  eb.updateBy            AS updateBy
+		FROM exp_payment_b eb
+		  LEFT JOIN conf_business_opportunity cbo
+		    ON eb.bus_id = cbo.ID
+		  LEFT JOIN conf_client cc
+		    ON eb.cus_id = cc.ID
+		  LEFT JOIN conf_activitity ca
+		    ON eb.act_id = ca.id
+		WHERE eb.expenses_h_id=#{paymentHID}
+	</select>
+	
+	<!-- 根据主表ID删除记录 -->
+	<delete id="delByMainId" parameterType="java.lang.Long">
+		DELETE FROM exp_payment_b 
+		WHERE
+		expenses_h_id=#{id}
+	</delete>
+	
+	
+	<!-- 获取该报销单关联的活动 -->
+	<select id="getActByMainId" resultMap="Map" parameterType="java.lang.Long" useCache="true">
+		SELECT
+		  b.act_id    AS `value`,
+		  ca.act_desc AS `text`
+		FROM exp_payment_b b
+		  LEFT JOIN conf_activitity ca
+		    ON b.act_id = ca.id
+		WHERE b.expenses_h_id = #{hid}
+		AND b.act_id IS NOT NULL
+		GROUP BY b.act_id
+	</select>
+	
+	<!-- 获取该报销单关联的商机 -->
+	<select id="getBusByMainId" resultMap="Map" parameterType="java.lang.Long" useCache="true">
+		SELECT
+		  b.bus_id   AS `value`,
+		  cb.bo_name AS `text`
+		FROM exp_payment_b b
+		  LEFT JOIN conf_business_opportunity cb
+		    ON b.bus_id = cb.id
+		WHERE b.expenses_h_id = #{hid}
+		AND b.bus_id IS NOT NULL
+		GROUP BY b.bus_id
+	</select>
+	
+	<!-- 获取该报销单关联的客户 -->
+	<select id="getCusByMainId" resultMap="Map" parameterType="java.lang.Long" useCache="true">
+		SELECT
+		  b.cus_id   AS `value`,
+		  cc.client_name AS `text`
+		FROM exp_payment_b b
+		  LEFT JOIN conf_client cc
+		    ON b.cus_id = cc.id
+		WHERE b.expenses_h_id = #{hid}
+		AND b.cus_id IS NOT NULL
+		GROUP BY b.cus_id
+	</select>
+	
+	<!-- 查询某个时间段是否有报销记录 -->
+	<select id="getByDate" resultMap="ExpPaymentB" useCache="false">
+		SELECT
+		<include refid="columns"/>
+		FROM exp_payment_b
+		WHERE ((begin_date&lt;=#{beginDate} AND end_date >= #{beginDate}) 
+		OR (begin_date&lt;=#{endDate} AND end_date >= #{endDate}))
+			AND real_cost_subject_c = #{realCostSubjectC}
+		AND createBy = #{userId}
+	</select>
+	
+	<!-- 查询当天审批通过的数据 -->
+	<select id="getExpPayPassDatas"  resultMap="ExpPaymentB" useCache="false">
+		select   T1.* from exp_payment_b T1 
+			left join exp_payment_h T2 on T1.expenses_h_id=T2.id
+		<where>
+		    and T2.bill_state = 3 and  T2.bill_type in (1,2)
+			and T1.updatetime  >=#{begindate,jdbcType=DATE}
+		    and T1.updatetime &lt;=#{enddate,jdbcType=DATE}
+		</where>		
+	</select>
+	
+</mapper>

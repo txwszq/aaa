@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kedacom.expenses.model.baseconfig.ConfCoster" >
+  <resultMap id="ConfCoster" type="com.kedacom.expenses.model.baseconfig.ConfCoster" >
+    <id column="ID" property="id" jdbcType="BIGINT" />
+    <result column="IS_TAKING_DEPT" property="isTakeDept" jdbcType="SMALLINT" />
+    <result column="COSTER_IDS" property="costerPks" jdbcType="VARCHAR" />
+    <result column="COSTER_NAMES" property="costerNames" jdbcType="VARCHAR" />
+    <result column="FINANCE_IDS" property="financePks" jdbcType="VARCHAR" />
+    <result column="FINANCE_NAMES" property="financeNames" jdbcType="VARCHAR" />
+     <result column="financecost_id" property="financeCostPk" jdbcType="VARCHAR" />
+    <result column="financecost_name" property="financeCostName" jdbcType="VARCHAR" />
+    <result column="DEPT_ID" property="deptId" jdbcType="VARCHAR" />
+    <result column="DEF1" property="def1" jdbcType="VARCHAR" />
+    <result column="DEF2" property="def2" jdbcType="VARCHAR" />
+    <result column="DEF3" property="def3" jdbcType="VARCHAR" />
+    <result column="DEF4" property="def4" jdbcType="VARCHAR" />
+     <result column="DEF5" property="def5" jdbcType="VARCHAR" />
+  </resultMap>
+  
+  <sql id="columns" >
+    ID,  IS_TAKING_DEPT, COSTER_IDS, COSTER_NAMES, FINANCE_IDS,  FINANCE_NAMES, financecost_id,financecost_name,
+    DEPT_ID,DEF1,DEF2,DEF3,DEF4,DEF5
+  </sql>
+  
+  <sql id="dynamicWhere" >
+  	<where >
+  		<if test="@Ognl@isNotEmpty(id)"> AND id  =#{id} </if>
+		<if test="@Ognl@isNotEmpty(isTakeDept)"> AND isTakeDept  LIKE '%${isTakeDept}%'  </if>
+		<if test="@Ognl@isNotEmpty(costerPks)"> AND costerPks  LIKE '%${costerPks}%'  </if>
+		<if test="@Ognl@isNotEmpty(costerNames)"> AND costerNames  LIKE '%${costerNames}%'  </if>
+		<if test="@Ognl@isNotEmpty(financePks)"> AND financePks  LIKE '%${financePks}%' </if>
+		<if test="@Ognl@isNotEmpty(financeNames)"> AND financeNames  LIKE '%${financeNames}%'  </if>
+		<if test="@Ognl@isNotEmpty(financeCostPk)"> AND financeCostPk  LIKE '%${financeCostPk}%' </if>
+		<if test="@Ognl@isNotEmpty(financeCostName)"> AND financeCostName  LIKE '%${financeCostName}%'  </if>
+		<if test="@Ognl@isNotEmpty(deptId)"> AND deptId  =#{deptId} </if>
+		<if test="@Ognl@isNotEmpty(def1)"> AND def1  =#{def1} </if>
+		<if test="@Ognl@isNotEmpty(def2)"> AND def2  =#{def2} </if>
+		<if test="@Ognl@isNotEmpty(def3)"> AND def3  =#{def3} </if>
+		<if test="@Ognl@isNotEmpty(def4)"> AND def4  =#{def4} </if>
+		<if test="@Ognl@isNotEmpty(def5)"> AND def5  =#{def5} </if>						
+    </where>
+  </sql>
+  
+  <insert id="add" parameterType="com.kedacom.expenses.model.baseconfig.ConfCoster">
+  		<selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
+      		SELECT LAST_INSERT_ID()
+    	</selectKey>
+		INSERT INTO conf_coster
+		(IS_TAKING_DEPT, COSTER_IDS, COSTER_NAMES, 
+      	FINANCE_IDS, FINANCE_NAMES,financecost_id,financecost_name, DEPT_ID,DEF1,DEF2,DEF3,DEF4,DEF5)
+		VALUES
+		(#{isTakeDept,jdbcType=SMALLINT}, #{costerPks,jdbcType=VARCHAR}, #{costerNames,jdbcType=VARCHAR}, 
+         #{financePks,jdbcType=VARCHAR}, #{financeNames,jdbcType=VARCHAR},#{financeCostPk,jdbcType=VARCHAR},#{financeCostName,jdbcType=VARCHAR},
+          #{deptId,jdbcType=VARCHAR}, #{def1,jdbcType=VARCHAR}, #{def2,jdbcType=VARCHAR}, #{def3,jdbcType=VARCHAR},#{def4,jdbcType=VARCHAR},#{def5,jdbcType=VARCHAR} )
+	</insert>
+	
+	<delete id="delById" parameterType="java.lang.Long">
+		DELETE FROM conf_coster 
+		WHERE
+		ID=#{id,jdbcType=BIGINT}
+	</delete>
+	
+    
+	<update id="update" parameterType="com.kedacom.expenses.model.baseconfig.ConfCoster">
+		update conf_coster
+    	set IS_TAKING_DEPT = #{isTakeDept,jdbcType=VARCHAR},
+      	COSTER_IDS = #{costerPks,jdbcType=VARCHAR},
+      	COSTER_NAMES = #{costerNames,jdbcType=VARCHAR},
+      	FINANCE_IDS = #{financePks,jdbcType=VARCHAR},
+      	FINANCE_NAMES = #{financeNames,jdbcType=VARCHAR},
+      	
+      	financecost_id=#{financeCostPk,jdbcType=VARCHAR},
+      	financecost_name=#{financeCostName,jdbcType=VARCHAR},
+      	
+      	DEPT_ID = #{deptId,jdbcType=VARCHAR},
+      	DEF1 = #{def1,jdbcType=VARCHAR},
+      	DEF2 = #{def2,jdbcType=VARCHAR},
+      	DEF3 = #{def3,jdbcType=VARCHAR},
+      	DEF4 = #{def4,jdbcType=VARCHAR},
+      	DEF5 = #{def5,jdbcType=VARCHAR}
+    	where id = #{id,jdbcType=BIGINT}
+	</update>
+	
+	<select id="getById" parameterType="java.lang.Long" resultMap="ConfCoster">
+		SELECT <include refid="columns"/>
+		FROM conf_coster
+		WHERE
+		ID = #{id,jdbcType=BIGINT}
+	</select>
+	
+	<select id="getByDept" parameterType="java.lang.Long" resultMap="ConfCoster" >
+		SELECT <include refid="columns"/>
+		FROM conf_coster
+		WHERE  
+		DEPT_ID = #{DEPT_ID,jdbcType=VARCHAR}
+	</select>
+	
+	<select id="getAll" resultMap="ConfCoster">
+		SELECT <include refid="columns"/>
+		FROM conf_coster   
+		<include refid="dynamicWhere" />
+		<if test="@Ognl@isNotEmpty(orderField)">
+		order by ${orderField} ${orderSeq}
+		</if>
+		<if test="@Ognl@isEmpty(orderField)">
+		order by id  desc
+		</if>
+	</select>
+	
+		<select id="getByTakeDept" parameterType="java.lang.Long" resultMap="ConfCoster" >
+		SELECT <include refid="columns"/>
+		FROM conf_coster
+		WHERE   IS_TAKING_DEPT =1 and 
+		DEPT_ID = #{DEPT_ID,jdbcType=VARCHAR}
+	</select>
+  
+</mapper>

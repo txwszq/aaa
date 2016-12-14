@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.kedacom.expenses.model.expenses.ExpPay">
+	<resultMap id="ExpPay" type="com.kedacom.expenses.model.expenses.ExpPay">
+			<id property="id" column="id" jdbcType="NUMERIC"/>
+			<result property="userId" column="user_id" jdbcType="NUMERIC"/>
+			<result property="payAmount" column="pay_amount" jdbcType="NUMERIC"/>
+			<result property="remark" column="remark" jdbcType="VARCHAR"/>
+			<result property="payDate" column="pay_date" jdbcType="TIMESTAMP"/>
+			<result property="createby" column="createby" jdbcType="NUMERIC"/>
+			<result property="createtime" column="createtime" jdbcType="TIMESTAMP"/>
+			<result property="updatetime" column="updatetime" jdbcType="TIMESTAMP"/>
+			<result property="updateby" column="updateby" jdbcType="NUMERIC"/>
+	</resultMap>
+	
+	<sql id="columns">
+		id ,user_id ,pay_amount ,remark ,pay_date ,createby ,createtime ,updatetime ,updateby 
+	</sql>
+	
+	<sql id="dynamicWhere">
+		<where>
+				<if test="@Ognl@isNotEmpty(userId)"> AND user_id = #{userId} </if>
+				<if test="@Ognl@isNotEmpty(payAmount)"> AND pay_amount = #{payAmount} </if>
+				<if test="@Ognl@isNotEmpty(remark)"> AND remark LIKE '%${remark}%' </if>
+				<if test="@Ognl@isNotEmpty(beginpayDate)"> AND pay_date  >=#{beginpayDate,jdbcType=DATE} </if>
+				<if test="@Ognl@isNotEmpty(endpayDate)"> AND pay_date &lt;=#{endpayDate,jdbcType=DATE}</if>
+				<if test="@Ognl@isNotEmpty(createby)"> AND createby = #{createby} </if>
+				<if test="@Ognl@isNotEmpty(begincreatetime)"> AND createtime  >=#{begincreatetime,jdbcType=DATE} </if>
+				<if test="@Ognl@isNotEmpty(endcreatetime)"> AND createtime &lt;=#{endcreatetime,jdbcType=DATE}</if>
+				<if test="@Ognl@isNotEmpty(beginupdatetime)"> AND updatetime  >=#{beginupdatetime,jdbcType=DATE} </if>
+				<if test="@Ognl@isNotEmpty(endupdatetime)"> AND updatetime &lt;=#{endupdatetime,jdbcType=DATE}</if>
+				<if test="@Ognl@isNotEmpty(updateby)"> AND updateby = #{updateby} </if>
+		</where>
+	</sql>
+	
+	<insert id="add" parameterType="com.kedacom.expenses.model.expenses.ExpPay">
+		INSERT INTO exp_pay
+		(<include refid="columns"/>)
+		VALUES
+		(#{id,jdbcType=NUMERIC},#{userId,jdbcType=NUMERIC},#{payAmount,jdbcType=NUMERIC},#{remark,jdbcType=VARCHAR},#{payDate,jdbcType=TIMESTAMP},#{createby,jdbcType=NUMERIC},#{createtime,jdbcType=TIMESTAMP},#{updatetime,jdbcType=TIMESTAMP},#{updateby,jdbcType=NUMERIC})
+	</insert>
+	
+	<delete id="delById" parameterType="java.lang.Long">
+		DELETE FROM exp_pay 
+		WHERE
+		id=#{id}
+	</delete>
+	
+	
+	<update id="update" parameterType="com.kedacom.expenses.model.expenses.ExpPay">
+		UPDATE exp_pay  SET
+		id=#{id,jdbcType=NUMERIC},
+		user_id=#{userId,jdbcType=NUMERIC},
+		pay_amount=#{payAmount,jdbcType=NUMERIC},
+		remark=#{remark,jdbcType=VARCHAR},
+		pay_date=#{payDate,jdbcType=TIMESTAMP},
+		createby=#{createby,jdbcType=NUMERIC},
+		createtime=#{createtime,jdbcType=TIMESTAMP},
+		updatetime=#{updatetime,jdbcType=TIMESTAMP},
+		updateby=#{updateby,jdbcType=NUMERIC}
+		WHERE
+		id=#{id}
+	</update>
+	
+	
+	<select id="getById" parameterType="java.lang.Long" resultMap="ExpPay" useCache="true">
+		SELECT <include refid="columns"/>
+		FROM exp_pay
+		WHERE id=#{id}
+	</select>
+	
+	<select id="getAll" resultMap="ExpPay" useCache="false">
+		SELECT <include refid="columns"/>
+		FROM exp_pay   
+		<include refid="dynamicWhere" />
+		<if test="@Ognl@isNotEmpty(orderField)">
+		order by ${orderField} ${orderSeq}
+		</if>
+		<if test="@Ognl@isEmpty(orderField)">
+		order by id  desc
+		</if>
+	</select>
+</mapper>

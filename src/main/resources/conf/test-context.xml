@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--加载配置文件 -->
+    <bean id="configproperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="location" value="/conf/app_test.properties" />
+    </bean>
+	 <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="properties" ref="configproperties" />
+    </bean>
+	
+	
+	<import resource="app-resources.xml" />
+	<import resource="classpath*:applicationContext.xml" />
+	<import resource="business-beans.xml" />
+	<import resource="classpath*:conf/app-security.xml" />
+	<import resource="app-webservice.xml" />
+	
+
+</beans>

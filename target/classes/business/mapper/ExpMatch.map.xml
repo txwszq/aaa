@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.kedacom.expenses.model.expenses.ExpMatch">
+	<resultMap id="ExpMatch" type="com.kedacom.expenses.model.expenses.ExpMatch">
+			<id property="id" column="id" jdbcType="NUMERIC"/>
+			<result column="busi_type" property="busiType" jdbcType="NUMERIC"/>
+			<result column="from_id" property="fromId" jdbcType="NUMERIC"/>
+			<result column="to_id" property="toId" jdbcType="NUMERIC"/>
+			<result column="happen_amount" property="happenAmount" jdbcType="NUMERIC"/>
+			<result column="remark" property="remark" jdbcType="VARCHAR"/>
+			<result column="createby" property="createby" jdbcType="NUMERIC"/>
+			<result column="createtime" property="createtime" jdbcType="TIMESTAMP"/>
+			<result column="updatetime" property="updatetime" jdbcType="TIMESTAMP"/>
+			<result column="updateby" property="updateby" jdbcType="NUMERIC"/>
+	</resultMap>
+	
+	<sql id="columns">
+		id ,busi_type ,from_id ,to_id ,happen_amount ,remark ,createby ,createtime ,updatetime ,updateby 
+	</sql>
+	
+	<sql id="dynamicWhere">
+		<where>
+				<if test="@Ognl@isNotEmpty(busiType"> AND busi_type = #{busiType} </if>
+				<if test="@Ognl@isNotEmpty(fromId)"> AND from_id = #{fromId} </if>
+				<if test="@Ognl@isNotEmpty(toId)"> AND to_id = #{toId} </if>
+				<if test="@Ognl@isNotEmpty(happenAmount)"> AND happen_amount = #{happenAmount} </if>
+				<if test="@Ognl@isNotEmpty(remark)"> AND remark LIKE '%${remark}%' </if>
+				<if test="@Ognl@isNotEmpty(createby)"> AND createby = #{createby} </if>
+				<if test="@Ognl@isNotEmpty(begincreatetime)"> AND createtime  >=#{begincreatetime,jdbcType=DATE} </if>
+				<if test="@Ognl@isNotEmpty(endcreatetime)"> AND createtime &lt;=#{endcreatetime,jdbcType=DATE}</if>
+				<if test="@Ognl@isNotEmpty(beginupdatetime)"> AND updatetime  >=#{beginupdatetime,jdbcType=DATE} </if>
+				<if test="@Ognl@isNotEmpty(endupdatetime)"> AND updatetime &lt;=#{endupdatetime,jdbcType=DATE}</if>
+				<if test="@Ognl@isNotEmpty(updateby)"> AND updateby = #{updateby} </if>
+		</where>
+	</sql>
+	
+	<insert id="add" parameterType="com.kedacom.expenses.model.expenses.ExpMatch">
+		INSERT INTO exp_match
+		(<include refid="columns"/>)
+		VALUES
+		(#{id,jdbcType=NUMERIC},#{busiType,jdbcType=NUMERIC},#{fromId,jdbcType=NUMERIC},#{toId,jdbcType=NUMERIC},#{happenAmount,jdbcType=NUMERIC},#{remark,jdbcType=VARCHAR},#{createby,jdbcType=NUMERIC},#{createtime,jdbcType=TIMESTAMP},#{updatetime,jdbcType=TIMESTAMP},#{updateby,jdbcType=NUMERIC})
+	</insert>
+	
+	<delete id="delById" parameterType="java.lang.Long">
+		DELETE FROM exp_match 
+		WHERE
+		id=#{id}
+	</delete>
+	
+	<delete id="delByExpensesHId" parameterType="java.lang.Long">
+		DELETE FROM exp_match 
+		WHERE from_id=#{expensesHId}
+		AND busi_type = 2 
+	</delete>
+	
+	<update id="update" parameterType="com.kedacom.expenses.model.expenses.ExpMatch">
+		UPDATE exp_match  SET
+		id=#{id,jdbcType=NUMERIC},
+		busi_type=#{busiType,jdbcType=NUMERIC},
+		from_id=#{fromId,jdbcType=NUMERIC},
+		to_id=#{toId,jdbcType=NUMERIC},
+		happen_amount=#{happenAmount,jdbcType=NUMERIC},
+		remark=#{remark,jdbcType=VARCHAR},
+		createby=#{createby,jdbcType=NUMERIC},
+		createtime=#{createtime,jdbcType=TIMESTAMP},
+		updatetime=#{updatetime,jdbcType=TIMESTAMP},
+		updateby=#{updateby,jdbcType=NUMERIC}
+		WHERE
+		id=#{id}
+	</update>
+	
+	
+	<select id="getById" parameterType="java.lang.Long" resultMap="ExpMatch" useCache="true">
+		SELECT <include refid="columns"/>
+		FROM exp_match
+		WHERE id=#{id}
+	</select>
+	
+	<select id="getAll" resultMap="ExpMatch" useCache="false">
+		SELECT <include refid="columns"/>
+		FROM exp_match   
+		<include refid="dynamicWhere" />
+		<if test="@Ognl@isNotEmpty(orderField)">
+		order by ${orderField} ${orderSeq}
+		</if>
+		<if test="@Ognl@isEmpty(orderField)">
+		order by id  desc
+		</if>
+	</select>
+	
+	<!-- 获取主单据ID的所有子单据 -->
+	<select id="getListByFromId" resultMap="ExpMatch" parameterType="java.lang.Long" useCache="true">
+		SELECT ema.*,ead.bill_code advanceBillCode
+		FROM exp_match ema,exp_advance ead
+		WHERE ema.to_id = ead.id
+		and from_id=#{expensesHID}
+		order by ema.createtime asc
+	</select>
+	
+	<!-- 获取主单据ID的所有子单据 -->
+	<select id="getListByToId" resultMap="ExpMatch" parameterType="java.lang.Long" useCache="true">
+		SELECT ema.*,ead.bill_code advanceBillCode
+		FROM exp_match ema,exp_advance ead
+		WHERE ema.to_id = ead.id
+		and to_id=#{toId}
+		order by ema.createtime asc
+	</select>
+	
+</mapper>

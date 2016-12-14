@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd"
+    default-autowire="byName" default-lazy-init="false">
+
+    <!-- component-scan @Component , @Controller , @Service , @Repository -->
+    <context:component-scan base-package="com.kedacom.*.dao" />
+    <context:component-scan base-package="com.kedacom.*.service" />
+    <context:component-scan base-package="com.kedacom.*.utils" />
+	
+
+    <bean id="sqlSessionFactory" class="com.kedacom.core.mybatis.SqlSessionFactoryFactoryBean">
+        <property name="configLocation" value="classpath:/conf/configuration.xml" />
+        <property name="mapperLocations">
+            <list>
+                <value>classpath:/business/mapper/*.map.xml</value>
+                <value>classpath*:/admin/mapper/*.map.xml</value>
+                <value>classpath*:/mapper/*.map.xml</value>
+            </list>
+        </property>
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+
+    <!-- 配置事务的传播特性 -->
+	<aop:config proxy-target-class="true">
+		<aop:advisor advice-ref="txAdvice" pointcut="execution(* com.kedacom.*.service..*.*(..))"  />
+		<!-- 
+		<aop:aspect ref="logAspect">
+			<aop:pointcut expression="execution(* com.kedacom.platform.controller..*.*(..))" id="logPointcut"/>
+			<aop:around pointcut-ref="logPointcut" method="doAudit"/>
+		</aop:aspect>
+		 -->  
+	</aop:config>
+
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+		  	<tx:method name="get*" read-only="true"/>
+			<tx:method name="is*" read-only="true"/>
+			<tx:method name="find*" read-only="true"/>
+			<tx:method name="*" isolation="DEFAULT"/>
+		</tx:attributes>
+	</tx:advice>
+
+    <!-- Druid Filter -->
+    <bean id="statFilter" class="com.alibaba.druid.filter.stat.StatFilter"></bean>
+
+</beans>

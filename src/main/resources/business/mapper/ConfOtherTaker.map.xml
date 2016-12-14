@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.kedacom.expenses.model.baseconfig.ConfOtherTaker">
+	<resultMap id="ConfOtherTaker" type="com.kedacom.expenses.model.baseconfig.ConfOtherTaker">
+			<id property="id" column="id" jdbcType="NUMERIC"/>
+			<result property="type" column="type" jdbcType="NUMERIC"/>
+			<result property="business_id" column="business_id" jdbcType="NUMERIC"/>
+			<result property="user_id" column="user_id" jdbcType="NUMERIC"/>
+			<result property="user_name" column="user_name" jdbcType="VARCHAR"/>
+			<result property="user_account" column="user_account" jdbcType="VARCHAR"/>
+			<result property="user_code" column="user_code" jdbcType="VARCHAR"/>
+	</resultMap>
+	
+	<sql id="columns">
+		id ,type ,business_id ,user_id ,user_name ,user_account ,user_code 
+	</sql>
+	
+	<sql id="dynamicWhere">
+		<where>
+				<if test="@Ognl@isNotEmpty(type)"> AND type = #{type} </if>
+				<if test="@Ognl@isNotEmpty(business_id)"> AND business_id = #{business_id} </if>
+				<if test="@Ognl@isNotEmpty(user_id)"> AND user_id = #{user_id} </if>
+				<if test="@Ognl@isNotEmpty(user_name)"> AND user_name LIKE '%${user_name}%' </if>
+				<if test="@Ognl@isNotEmpty(user_account)"> AND user_account LIKE '%${user_account}%' </if>
+				<if test="@Ognl@isNotEmpty(user_code)"> AND user_code LIKE '%${user_code}%' </if>
+		</where>
+	</sql>
+	
+	<insert id="add" parameterType="com.kedacom.expenses.model.baseconfig.ConfOtherTaker">
+		INSERT INTO conf_other_taker
+		(<include refid="columns"/>)
+		VALUES
+		(#{id,jdbcType=NUMERIC},#{type,jdbcType=NUMERIC},#{business_id,jdbcType=NUMERIC},#{user_id,jdbcType=NUMERIC},#{user_name,jdbcType=VARCHAR},#{user_account,jdbcType=VARCHAR},#{user_code,jdbcType=VARCHAR})
+	</insert>
+	
+	<delete id="delById" parameterType="java.lang.Long">
+		DELETE FROM conf_other_taker 
+		WHERE
+		id=#{id}
+	</delete>
+	
+		<delete id="delByBusId" parameterType="java.lang.Long">
+		DELETE FROM conf_other_taker 
+		WHERE
+		business_id=#{businessId}
+	</delete>
+	
+	
+	<update id="update" parameterType="com.kedacom.expenses.model.baseconfig.ConfOtherTaker">
+		UPDATE conf_other_taker  SET
+		id=#{id,jdbcType=NUMERIC},
+		type=#{type,jdbcType=NUMERIC},
+		business_id=#{business_id,jdbcType=NUMERIC},
+		user_id=#{user_id,jdbcType=NUMERIC},
+		user_name=#{user_name,jdbcType=VARCHAR},
+		user_account=#{user_account,jdbcType=VARCHAR},
+		user_code=#{user_code,jdbcType=VARCHAR}
+		WHERE
+		id=#{id}
+	</update>
+	
+	
+	<select id="getById" parameterType="java.lang.Long" resultMap="ConfOtherTaker" useCache="true">
+		SELECT <include refid="columns"/>
+		FROM conf_other_taker
+		WHERE id=#{id}
+	</select>
+	
+	<select id="getAll" resultMap="ConfOtherTaker" useCache="false">
+		SELECT <include refid="columns"/>
+		FROM conf_other_taker   
+		<include refid="dynamicWhere" />
+		<if test="@Ognl@isNotEmpty(orderField)">
+		order by ${orderField} ${orderSeq}
+		</if>
+		<if test="@Ognl@isEmpty(orderField)">
+		order by id  desc
+		</if>
+	</select>
+	
+	<select id="getConfOtherTasker" parameterType="java.lang.Long" resultMap="ConfOtherTaker" useCache="true">
+		SELECT <include refid="columns"/>
+		FROM conf_other_taker
+		WHERE type=#{type}
+		and business_id=#{businessId}
+		and user_id=#{userId}
+	</select>
+	
+</mapper>

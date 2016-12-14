@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.kedacom.expenses.model.qq.QQNumManage">
+	<resultMap id="QQNumManage" type="com.kedacom.expenses.model.qq.QQNumManage">
+			<id property="id" column="id" jdbcType="NUMERIC"/>
+			<result property="qq_num" column="qq_num" jdbcType="VARCHAR"/>
+			<result property="qq_pwd" column="qq_pwd" jdbcType="VARCHAR"/>
+			<result property="friend_is_normal" column="friend_is_normal" jdbcType="NUMERIC"/>
+			<result property="qzone_is_normal" column="qzone_is_normal" jdbcType="NUMERIC"/>
+			<result property="need_add_friend" column="need_add_friend" jdbcType="NUMERIC"/>
+			<result property="need_add_qzone" column="need_add_qzone" jdbcType="NUMERIC"/>
+			<result property="user_id" column="user_id" jdbcType="NUMERIC"/>
+			<result property="sn" column="sn" jdbcType="NUMERIC"/>
+	</resultMap>
+	
+	<sql id="columns">
+		id ,qq_num ,qq_pwd ,friend_is_normal ,qzone_is_normal ,need_add_friend ,need_add_qzone ,user_id,sn
+	</sql>
+	
+	<sql id="dynamicWhere">
+		<where>
+				<if test="@Ognl@isNotEmpty(qq_num)"> AND qq_num LIKE '%${qq_num}%' </if>
+				<if test="@Ognl@isNotEmpty(qq_pwd)"> AND qq_pwd LIKE '%${qq_pwd}%' </if>
+				<if test="@Ognl@isNotEmpty(friend_is_normal)"> AND friend_is_normal = #{friend_is_normal} </if>
+				<if test="@Ognl@isNotEmpty(qzone_is_normal)"> AND qzone_is_normal = #{qzone_is_normal} </if>
+				<if test="@Ognl@isNotEmpty(need_add_friend)"> AND need_add_friend = #{need_add_friend} </if>
+				<if test="@Ognl@isNotEmpty(need_add_qzone)"> AND need_add_qzone = #{need_add_qzone} </if>
+				<if test="@Ognl@isNotEmpty(user_id)"> AND user_id = #{user_id} </if>
+				<if test="@Ognl@isNotEmpty(sn)"> AND sn = #{sn} </if>
+		</where>
+	</sql>
+	
+	<insert id="add" parameterType="com.kedacom.expenses.model.qq.QQNumManage">
+		INSERT INTO qq_num_manage
+		(<include refid="columns"/>)
+		VALUES
+		(#{id,jdbcType=NUMERIC},#{qq_num,jdbcType=VARCHAR},#{qq_pwd,jdbcType=VARCHAR},#{friend_is_normal,jdbcType=NUMERIC},#{qzone_is_normal,jdbcType=NUMERIC},#{need_add_friend,jdbcType=NUMERIC},#{need_add_qzone,jdbcType=NUMERIC},#{user_id,jdbcType=NUMERIC}#{sn,jdbcType=NUMERIC})
+	</insert>
+	
+	<delete id="delById" parameterType="java.lang.Long">
+		DELETE FROM qq_num_manage 
+		WHERE
+		id=#{id}
+	</delete>
+	
+	
+	<update id="update" parameterType="com.kedacom.expenses.model.qq.QQNumManage">
+		UPDATE qq_num_manage  SET
+		id=#{id,jdbcType=NUMERIC},
+		qq_num=#{qq_num,jdbcType=VARCHAR},
+		qq_pwd=#{qq_pwd,jdbcType=VARCHAR},
+		friend_is_normal=#{friend_is_normal,jdbcType=NUMERIC},
+		qzone_is_normal=#{qzone_is_normal,jdbcType=NUMERIC},
+		need_add_friend=#{need_add_friend,jdbcType=NUMERIC},
+		need_add_qzone=#{need_add_qzone,jdbcType=NUMERIC},
+		user_id=#{user_id,jdbcType=NUMERIC},
+		sn=#{sn,jdbcType=NUMERIC}
+		WHERE
+		id=#{id}
+	</update>
+	
+	
+	<select id="getById" parameterType="java.lang.Long" resultMap="QQNumManage" useCache="true">
+		SELECT <include refid="columns"/>
+		FROM qq_num_manage
+		WHERE qq_num=#{qq_num,jdbcType=VARCHAR}
+	</select>
+	
+	<select id="getByQQNum" parameterType="java.lang.Long" resultMap="QQNumManage" useCache="true">
+		SELECT <include refid="columns"/>
+		FROM qq_num_manage
+		WHERE id=#{id}
+	</select>
+	
+	<select id="getAll" resultMap="QQNumManage" useCache="false">
+		SELECT <include refid="columns"/>
+		FROM qq_num_manage   
+		<include refid="dynamicWhere" />
+		<if test="@Ognl@isNotEmpty(orderField)">
+		order by ${orderField} ${orderSeq}
+		</if>
+		<if test="@Ognl@isEmpty(orderField)">
+		order by id  desc
+		</if>
+	</select>
+	
+	<select id="getLimitSn" resultMap="QQNumManage" useCache="false">
+		SELECT <include refid="columns"/>
+		FROM qq_num_manage   
+		order by sn asc
+		limit 0,1
+	</select>
+</mapper>

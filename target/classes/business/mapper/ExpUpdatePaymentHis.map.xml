@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.kedacom.expenses.model.expenses.ExpUpdatePaymentHis">
+	<resultMap id="ExpUpdatePaymentHis" type="com.kedacom.expenses.model.expenses.ExpUpdatePaymentHis">
+			<id property="id" column="id" jdbcType="NUMERIC"/>
+			<result property="paymentBId" column="payment_b_id" jdbcType="NUMERIC"/>
+			<result property="costSubjectC" column="cost_subject_c" jdbcType="NUMERIC"/>
+			<result property="costSubjectP" column="cost_subject_p" jdbcType="NUMERIC"/>
+			<result property="realCostSubjectC" column="realCostSubjectC" jdbcType="NUMERIC"/>
+			<result property="realCostSubjectP" column="real_cost_subject_p" jdbcType="NUMERIC"/>
+			<result property="recordType" column="record_type" jdbcType="NUMERIC"/>
+	</resultMap>
+	
+	<sql id="columns">
+		id ,payment_b_id ,cost_subject_c ,cost_subject_p ,real_cost_subject_c ,real_cost_subject_p ,record_type 
+	</sql>
+	
+	<sql id="dynamicWhere">
+		<where>
+				<if test="@Ognl@isNotEmpty(paymentBId)"> AND payment_b_id = #{paymentBId} </if>
+				<if test="@Ognl@isNotEmpty(costSubjectC)"> AND cost_subject_c = #{costSubjectC} </if>
+				<if test="@Ognl@isNotEmpty(costSubjectP)"> AND cost_subject_p = #{costSubjectP} </if>
+				<if test="@Ognl@isNotEmpty(realCostSubjectC)"> AND real_cost_subject_c = #{realCostSubjectC} </if>
+				<if test="@Ognl@isNotEmpty(realCostSubjectP)"> AND real_cost_subject_p = #{realCostSubjectP} </if>
+				<if test="@Ognl@isNotEmpty(recordType)"> AND record_type = #{recordType} </if>
+		</where>
+	</sql>
+	
+	<insert id="add" parameterType="com.kedacom.expenses.model.expenses.ExpUpdatePaymentHis">
+		INSERT INTO exp_update_payment_his
+		(<include refid="columns"/>)
+		VALUES
+		(#{id,jdbcType=NUMERIC},#{paymentBId,jdbcType=NUMERIC},#{costSubjectC,jdbcType=NUMERIC},#{costSubjectP,jdbcType=NUMERIC},#{realCostSubjectC,jdbcType=NUMERIC},#{realCostSubjectP,jdbcType=NUMERIC},#{recordType,jdbcType=NUMERIC})
+	</insert>
+	
+	<delete id="delById" parameterType="java.lang.Long">
+		DELETE FROM exp_update_payment_his 
+		WHERE
+		id=#{id}
+	</delete>
+	
+	
+	<update id="update" parameterType="com.kedacom.expenses.model.expenses.ExpUpdatePaymentHis">
+		UPDATE exp_update_payment_his  SET
+		id=#{id,jdbcType=NUMERIC},
+		payment_b_id=#{paymentBId,jdbcType=NUMERIC},
+		cost_subject_c=#{costSubjectC,jdbcType=NUMERIC},
+		cost_subject_p=#{costSubjectP,jdbcType=NUMERIC},
+		real_cost_subject_c=#{realCostSubjectC,jdbcType=NUMERIC},
+		real_cost_subject_p=#{realCostSubjectP,jdbcType=NUMERIC},
+		record_type=#{recordType,jdbcType=NUMERIC}
+		WHERE
+		id=#{id}
+	</update>
+	
+	
+	<select id="getById" parameterType="java.lang.Long" resultMap="ExpUpdatePaymentHis" useCache="true">
+		SELECT <include refid="columns"/>
+		FROM exp_update_payment_his
+		WHERE id=#{id}
+	</select>
+	
+	<select id="getAll" resultMap="ExpUpdatePaymentHis" useCache="false">
+		SELECT <include refid="columns"/>
+		FROM exp_update_payment_his   
+		<include refid="dynamicWhere" />
+		<if test="@Ognl@isNotEmpty(orderField)">
+		order by ${orderField} ${orderSeq}
+		</if>
+		<if test="@Ognl@isEmpty(orderField)">
+		order by id  desc
+		</if>
+	</select>
+</mapper>

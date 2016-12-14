@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.kedacom.expenses.model.expenses.ExpAdvanceHis">
+	<resultMap id="ExpAdvanceHis" type="com.kedacom.expenses.model.expenses.ExpAdvanceHis">
+			<id property="id" column="id" jdbcType="NUMERIC"/>
+			<result column="cost_advance_id" property="costAdvanceId" jdbcType="NUMERIC"/>
+			<result column="per_advanced" property="perAdvanced" jdbcType="NUMERIC"/>
+			<result column="per_paymented_total" property="perPaymentedTotal" jdbcType="NUMERIC"/>
+			<result column="per_payed_amount" property="perPayedAmount" jdbcType="NUMERIC"/>
+			<result column="per_residual" property="perResidual" jdbcType="NUMERIC"/>
+			<result column="special_advanced" property="specialAdvanced" jdbcType="NUMERIC"/>
+			<result column="special_paymented_total" property="specialPaymentedTotal" jdbcType="NUMERIC"/>
+			<result column="special_payed_amount" property="specialPayedAmount" jdbcType="NUMERIC"/>
+			<result column="special_residual" property="specialResidual" jdbcType="NUMERIC"/>
+			<result column="createby" property="createby" jdbcType="NUMERIC"/>
+			<result column="createtime" property="createtime" jdbcType="TIMESTAMP"/>
+			<result column="updatetime" property="updatetime" jdbcType="TIMESTAMP"/>
+			<result column="updateby" property="updateby" jdbcType="NUMERIC"/>
+	</resultMap>
+	
+	<sql id="columns">
+		id ,cost_advance_id ,per_advanced ,per_paymented_total ,per_payed_amount ,per_residual ,special_advanced ,special_paymented_total ,special_payed_amount ,special_residual ,createby ,createtime ,updatetime ,updateby 
+	</sql>
+	
+	<sql id="dynamicWhere">
+		<where>
+				<if test="@Ognl@isNotEmpty(costAdvanceId)"> AND cost_advance_id = #{costAdvanceId} </if>
+				<if test="@Ognl@isNotEmpty(perAdvanced)"> AND per_advanced = #{perAdvanced} </if>
+				<if test="@Ognl@isNotEmpty(perPaymentedTotal)"> AND per_paymented_total = #{perPaymentedTotal} </if>
+				<if test="@Ognl@isNotEmpty(perPayedAmount)"> AND per_payed_amount = #{perPayedAmount} </if>
+				<if test="@Ognl@isNotEmpty(perResidual)"> AND per_residual = #{perResidual} </if>
+				<if test="@Ognl@isNotEmpty(specialAdvanced)"> AND special_advanced = #{specialAdvanced} </if>
+				<if test="@Ognl@isNotEmpty(specialPaymentedTotal)"> AND special_paymented_total = #{specialPaymentedTotal} </if>
+				<if test="@Ognl@isNotEmpty(specialPayedAmount)"> AND special_payed_amount = #{specialPayedAmount} </if>
+				<if test="@Ognl@isNotEmpty(specialResidual)"> AND special_residual = #{specialResidual} </if>
+				<if test="@Ognl@isNotEmpty(createby)"> AND createby = #{createby} </if>
+				<if test="@Ognl@isNotEmpty(begincreatetime)"> AND createtime  >=#{begincreatetime,jdbcType=DATE} </if>
+				<if test="@Ognl@isNotEmpty(endcreatetime)"> AND createtime &lt;=#{endcreatetime,jdbcType=DATE}</if>
+				<if test="@Ognl@isNotEmpty(beginupdatetime)"> AND updatetime  >=#{beginupdatetime,jdbcType=DATE} </if>
+				<if test="@Ognl@isNotEmpty(endupdatetime)"> AND updatetime &lt;=#{endupdatetime,jdbcType=DATE}</if>
+				<if test="@Ognl@isNotEmpty(updateby)"> AND updateby = #{updateby} </if>
+		</where>
+	</sql>
+	
+	<insert id="add" parameterType="com.kedacom.expenses.model.expenses.ExpAdvanceHis"   useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO exp_advance_his
+		(<include refid="columns"/>)
+		VALUES
+		(#{id,jdbcType=NUMERIC},#{costAdvanceId,jdbcType=NUMERIC},#{perAdvanced,jdbcType=NUMERIC},
+		#{perPaymentedTotal,jdbcType=NUMERIC},#{perPayedAmount,jdbcType=NUMERIC},#{perResidual,jdbcType=NUMERIC},
+		#{specialAdvanced,jdbcType=NUMERIC},#{specialPaymentedTotal,jdbcType=NUMERIC},#{specialPayedAmount,jdbcType=NUMERIC},
+		#{specialResidual,jdbcType=NUMERIC},#{createby,jdbcType=NUMERIC},#{createtime,jdbcType=TIMESTAMP},
+		#{updatetime,jdbcType=TIMESTAMP},#{updateby,jdbcType=NUMERIC})
+	</insert>
+	
+	<delete id="delById" parameterType="java.lang.Long">
+		DELETE FROM exp_advance_his 
+		WHERE
+		id=#{id}
+	</delete>
+	
+	
+	<update id="update" parameterType="com.kedacom.expenses.model.expenses.ExpAdvanceHis">
+		UPDATE exp_advance_his  SET
+		id=#{id,jdbcType=NUMERIC},
+		cost_advance_id=#{costAdvanceId,jdbcType=NUMERIC},
+		per_advanced=#{perAdvanced,jdbcType=NUMERIC},
+		per_paymented_total=#{perPaymentedTotal,jdbcType=NUMERIC},
+		per_payed_amount=#{perPayedAmount,jdbcType=NUMERIC},
+		per_residual=#{perResidual,jdbcType=NUMERIC},
+		special_advanced=#{specialAdvanced,jdbcType=NUMERIC},
+		special_paymented_total=#{specialPaymentedTotal,jdbcType=NUMERIC},
+		special_payed_amount=#{specialPayedAmount,jdbcType=NUMERIC},
+		special_residual=#{specialResidual,jdbcType=NUMERIC},
+		createby=#{createby,jdbcType=NUMERIC},
+		createtime=#{createtime,jdbcType=TIMESTAMP},
+		updatetime=#{updatetime,jdbcType=TIMESTAMP},
+		updateby=#{updateby,jdbcType=NUMERIC}
+		WHERE
+		id=#{id}
+	</update>
+	
+	
+	<select id="getById" parameterType="java.lang.Long" resultMap="ExpAdvanceHis" useCache="true">
+		SELECT <include refid="columns"/>
+		FROM exp_advance_his
+		WHERE id=#{id}
+	</select>
+	
+		<select id="getByExpAdv" parameterType="java.lang.Long" resultMap="ExpAdvanceHis" useCache="true">
+		SELECT <include refid="columns"/>
+		FROM exp_advance_his
+		WHERE cost_advance_id=#{id}
+	</select>
+	
+	
+	<delete id="delByCosAdvId" parameterType="java.lang.Long">
+		DELETE FROM exp_advance_his 
+		WHERE
+		cost_advance_id=#{costAdvanceId}
+	</delete>
+	
+	
+	<select id="getAll" resultMap="ExpAdvanceHis" useCache="false">
+		SELECT <include refid="columns"/>
+		FROM exp_advance_his   
+		<include refid="dynamicWhere" />
+		<if test="@Ognl@isNotEmpty(orderField)">
+		order by ${orderField} ${orderSeq}
+		</if>
+		<if test="@Ognl@isEmpty(orderField)">
+		order by id  desc
+		</if>
+	</select>
+</mapper>

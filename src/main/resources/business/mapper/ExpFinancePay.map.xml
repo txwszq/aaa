@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.kedacom.expenses.model.expenses.ExpFinancePay">
+	<resultMap id="ExpFinancePay" type="com.kedacom.expenses.model.expenses.ExpFinancePay">
+			<id property="id" column="id" jdbcType="NUMERIC"/>
+			<result property="code" column="code" jdbcType="NUMERIC"/>
+			<result property="state" column="state" jdbcType="NUMERIC"/>
+			<result property="amount" column="amount" jdbcType="NUMERIC"/>
+	</resultMap>
+	
+	<sql id="columns">
+		id ,code, state,amount
+	</sql>
+	
+	<sql id="dynamicWhere">
+		<where>
+				<if test="@Ognl@isNotEmpty(code)"> AND code = #{code} </if>
+				<if test="@Ognl@isNotEmpty(state)"> AND state = #{state} </if>
+				<if test="@Ognl@isNotEmpty(amount)"> AND amount = #{amount} </if>
+		</where>
+	</sql>
+	
+	<insert id="add" parameterType="com.kedacom.expenses.model.expenses.ExpFinancePay">
+		INSERT INTO finance_pay
+		(<include refid="columns"/>)
+		VALUES
+		(#{id,jdbcType=NUMERIC},#{code,jdbcType=NUMERIC},#{state,jdbcType=NUMERIC},#{amount,jdbcType=NUMERIC})
+	</insert>
+	
+	<delete id="delById" parameterType="java.lang.Long">
+		DELETE FROM finance_pay 
+		WHERE
+		id=#{id}
+	</delete>
+	
+	<delete id="delByCode" parameterType="java.lang.Long">
+		DELETE FROM finance_pay 
+		WHERE
+		code=#{code}
+	</delete>
+	
+	<update id="update" parameterType="com.kedacom.expenses.model.expenses.ExpFinancePay">
+		UPDATE finance_pay  SET
+		id=#{id,jdbcType=NUMERIC},
+		code=#{code,jdbcType=NUMERIC},
+		state=#{state,jdbcType=NUMERIC},
+		amount=#{amount,jdbcType=NUMERIC}
+		WHERE
+		id=#{id}
+	</update>
+	
+	<update id="updateByCode" parameterType="com.kedacom.expenses.model.expenses.ExpFinancePay">
+		UPDATE finance_pay  SET
+		id=#{id,jdbcType=NUMERIC},
+		code=#{code,jdbcType=NUMERIC},
+		state=#{state,jdbcType=NUMERIC},
+		amount=#{amount,jdbcType=NUMERIC}
+		WHERE
+		code=#{code},
+	</update>
+	
+	<select id="getById" parameterType="java.lang.Long" resultMap="ExpFinancePay" useCache="true">
+		SELECT <include refid="columns"/>
+		FROM finance_pay
+		WHERE id=#{id}
+	</select>
+	
+	<select id="getAll" resultMap="ExpFinancePay" useCache="false">
+		SELECT <include refid="columns"/>
+		FROM finance_pay   
+		<include refid="dynamicWhere" />
+		<if test="@Ognl@isNotEmpty(orderField)">
+		order by ${orderField} ${orderSeq}
+		</if>
+		<if test="@Ognl@isEmpty(orderField)">
+		order by id  desc
+		</if>
+	</select>
+</mapper>

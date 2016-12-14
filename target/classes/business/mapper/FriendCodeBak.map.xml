@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.kedacom.expenses.model.qq.FriendCodeBak">
+	<resultMap id="friendCodeBak" type="com.kedacom.expenses.model.qq.FriendCodeBak">
+			<id property="id" column="id" jdbcType="NUMERIC"/>
+			<result property="hash_code" column="hash_code" jdbcType="VARCHAR"/>
+			<result property="city_code" column="city_code" jdbcType="VARCHAR"/>
+			<result property="state" column="state" jdbcType="NUMERIC"/>
+	</resultMap>
+	
+	<sql id="columns">
+		id ,hash_code ,city_code ,state 
+	</sql>
+	
+	<sql id="dynamicWhere">
+		<where>
+				<if test="@Ognl@isNotEmpty(hash_code)"> AND hash_code LIKE '%${hash_code}%' </if>
+				<if test="@Ognl@isNotEmpty(city_code)"> AND city_code LIKE '%${city_code}%' </if>
+				<if test="@Ognl@isNotEmpty(state)"> AND state = #{state} </if>
+		</where>
+	</sql>
+	
+	<insert id="add" parameterType="com.kedacom.expenses.model.qq.FriendCodeBak">
+		INSERT INTO friend_code_bak
+		(<include refid="columns"/>)
+		VALUES
+		(#{id,jdbcType=NUMERIC},#{hash_code,jdbcType=VARCHAR},#{city_code,jdbcType=VARCHAR},#{state,jdbcType=NUMERIC})
+	</insert>
+	
+	<delete id="delById" parameterType="java.lang.Long">
+		DELETE FROM friend_code_bak
+		WHERE
+		id=#{id}
+	</delete>
+	
+	
+	<update id="update" parameterType="com.kedacom.expenses.model.qq.FriendCodeBak">
+		UPDATE friend_code_bak SET
+		id=#{id,jdbcType=NUMERIC},
+		hash_code=#{hash_code,jdbcType=VARCHAR},
+		city_code=#{city_code,jdbcType=VARCHAR},
+		state=#{state,jdbcType=NUMERIC}
+		WHERE
+		id=#{id}
+	</update>
+	
+	<!-- 更新状态为1 -->
+	<update id="updateState" parameterType="java.util.List">
+		UPDATE friend_code_bak
+		SET state = '1'
+		WHERE hash_code in
+		<foreach item="code" collection="list" open="(" separator="," close=")">  
+                     #{code}
+       </foreach>   
+	</update>
+	
+	<select id="getByState" parameterType="java.lang.Integer" resultMap="friendCodeBak" useCache="true">
+		SELECT <include refid="columns"/>
+		FROM friend_code_bak
+		WHERE state=#{state}
+		limit 0,18
+	</select>
+	
+	<select id="getById" parameterType="java.lang.Long" resultMap="friendCodeBak" useCache="true">
+		SELECT <include refid="columns"/>
+		FROM friend_code_bak
+		WHERE id=#{id}
+	</select>
+	
+	<select id="getAll" resultMap="friendCodeBak" useCache="false">
+		SELECT <include refid="columns"/>
+		FROM friend_code_bak   
+		<include refid="dynamicWhere" />
+		<if test="@Ognl@isNotEmpty(orderField)">
+		order by ${orderField} ${orderSeq}
+		</if>
+		<if test="@Ognl@isEmpty(orderField)">
+		order by id  desc
+		</if>
+	</select>
+</mapper>

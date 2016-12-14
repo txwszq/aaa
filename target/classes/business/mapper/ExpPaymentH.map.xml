@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.kedacom.expenses.model.expenses.ExpPaymentH">
+	<resultMap id="ExpPaymentH" type="com.kedacom.expenses.model.expenses.ExpPaymentH">
+			<id column="id" property="id" jdbcType="NUMERIC"/>
+			<result column="processes_id" property="processesId" jdbcType="NUMERIC"/>
+			<result column="bill_type" property="billType" jdbcType="NUMERIC"/>
+			<result column="bill_code" property="billCode" jdbcType="VARCHAR"/>
+			<result column="applyer_id" property="applyerId" jdbcType="NUMERIC"/>
+			<result column="applyer_name" property="applyerName" jdbcType="VARCHAR"/>
+			<result column="apply_dept_id" property="applyDeptId" jdbcType="NUMERIC"/>
+			<result column="apply_dept_name" property="applyDeptName" jdbcType="VARCHAR"/>
+			<result column="bill_state" property="billState" jdbcType="NUMERIC"/>
+			<result column="bill_num" property="billNum" jdbcType="NUMERIC"/>
+			<result column="real_bill_num" property="realBillNum" jdbcType="NUMERIC"/>
+			<result column="payment_amount" property="paymentAmount" jdbcType="NUMERIC"/>
+			<result column="residual_amount" property="residualAmount" jdbcType="NUMERIC"/>
+			<result column="is_finish" property="isFinish" jdbcType="NUMERIC"/>
+			<result column="real_payment_amount" property="realPaymentAmount" jdbcType="NUMERIC"/>
+			<result column="take_dept_id" property="takeDeptId" jdbcType="NUMERIC"/>
+			<result column="take_dept_name" property="takeDeptName" jdbcType="VARCHAR"/>
+			<result column="descript" property="descript" jdbcType="VARCHAR"/>
+			<result column="approve_id" property="approveId" jdbcType="NUMERIC"/>
+			<result column="approve_name" property="approveName" jdbcType="VARCHAR"/>
+			<result column="approve_date" property="approveDate" jdbcType="TIMESTAMP"/>
+			<result column="approve_note" property="approveNote" jdbcType="VARCHAR"/>
+			<result column="specialty_bus" property="specialtyBus" jdbcType="NUMERIC"/>
+			<result column="is_take_depts" property="isTakeDepts" jdbcType="NUMERIC"/>
+			<result column="createby" property="createby" jdbcType="NUMERIC"/>
+			<result column="createtime" property="createtime" jdbcType="TIMESTAMP"/>
+			<result column="updatetime" property="updatetime" jdbcType="TIMESTAMP"/>
+			<result column="updateby" property="updateby" jdbcType="NUMERIC"/>
+			<result column="datasource" property="dataSource" jdbcType="NUMERIC"/>
+	</resultMap>
+	
+	<resultMap id="Map" type="java.util.Map">
+	</resultMap>
+	
+	<sql id="columns">
+		id ,processes_id ,bill_type ,bill_code ,applyer_id ,applyer_name ,apply_dept_id ,apply_dept_name ,bill_state ,bill_num ,real_bill_num ,payment_amount ,residual_amount ,is_finish ,real_payment_amount ,take_dept_id ,take_dept_name ,descript ,approve_id ,approve_name ,approve_date ,approve_note ,specialty_bus ,is_take_depts ,createby ,createtime ,updatetime ,updateby ,datasource 
+	</sql>
+	
+	<sql id="dynamicWhere">
+		<where>
+				<if test="@Ognl@isNotEmpty(processesId)"> AND processes_id = #{processesId} </if>
+				<if test="@Ognl@isNotEmpty(billType)"> AND bill_type = #{billType} </if>
+				<if test="@Ognl@isNotEmpty(billCode)"> AND bill_code LIKE '%${billCode}%' </if>
+				<if test="@Ognl@isNotEmpty(applyerId)"> AND applyer_id = #{applyerId} </if>
+				<if test="@Ognl@isNotEmpty(applyerName)"> AND applyer_name LIKE '%${applyerName}%' </if>
+				<if test="@Ognl@isNotEmpty(applyDeptId)"> AND apply_dept_id = #{applyDeptId} </if>
+				<if test="@Ognl@isNotEmpty(applyDeptName)"> AND apply_dept_name LIKE '%${applyDeptName}%' </if>
+				<if test="@Ognl@isNotEmpty(billState)"> AND bill_state = #{billState} </if>
+				<if test="@Ognl@isNotEmpty(billNum)"> AND bill_num = #{billNum} </if>
+				<if test="@Ognl@isNotEmpty(realBillNum)"> AND real_bill_num = #{realBillNum} </if>
+				<if test="@Ognl@isNotEmpty(paymentAmount)"> AND payment_amount = #{paymentAmount} </if>
+				<if test="@Ognl@isNotEmpty(residualAmount)"> AND residual_amount = #{residualAmount} </if>
+				<if test="@Ognl@isNotEmpty(isFinish)"> AND is_finish = #{isFinish} </if>
+				<if test="@Ognl@isNotEmpty(realPaymentAmount)"> AND real_payment_amount = #{realPaymentAmount} </if>
+				<if test="@Ognl@isNotEmpty(takeDeptId)"> AND take_dept_id = #{takeDeptId} </if>
+				<if test="@Ognl@isNotEmpty(takeDeptName)"> AND take_dept_name LIKE '%${takeDeptName}%' </if>
+				<if test="@Ognl@isNotEmpty(descript)"> AND descript LIKE '%${descript}%' </if>
+				<if test="@Ognl@isNotEmpty(approveId)"> AND approve_id = #{approveId} </if>
+				<if test="@Ognl@isNotEmpty(approveName)"> AND approve_name LIKE '%${approveName}%' </if>
+				<if test="@Ognl@isNotEmpty(beginapproveDate)"> AND approve_date  >=#{beginapproveDate,jdbcType=DATE} </if>
+				<if test="@Ognl@isNotEmpty(endapproveDate)"> AND approve_date &lt;=#{endapproveDate,jdbcType=DATE}</if>
+				<if test="@Ognl@isNotEmpty(approveNote)"> AND approve_note LIKE '%${approveNote}%' </if>
+				<if test="@Ognl@isNotEmpty(specialtyBus)"> AND specialty_bus = #{specialtyBus} </if>
+				<if test="@Ognl@isNotEmpty(isTakeDepts)"> AND is_take_depts = #{isTakeDepts} </if>
+				<if test="@Ognl@isNotEmpty(createby)"> AND createby = #{createby} </if>
+				<if test="@Ognl@isNotEmpty(begincreatetime)"> AND createtime  >=#{begincreatetime,jdbcType=DATE} </if>
+				<if test="@Ognl@isNotEmpty(endcreatetime)"> AND createtime &lt;=#{endcreatetime,jdbcType=DATE}</if>
+				<if test="@Ognl@isNotEmpty(beginupdatetime)"> AND updatetime  >=#{beginupdatetime,jdbcType=DATE} </if>
+				<if test="@Ognl@isNotEmpty(endupdatetime)"> AND updatetime &lt;=#{endupdatetime,jdbcType=DATE}</if>
+				<if test="@Ognl@isNotEmpty(updateby)"> AND updateby = #{updateby} </if>
+				<if test="@Ognl@isNotEmpty(datasource)"> AND datasource = #{dataSource} </if>
+		</where>
+	</sql>
+	
+	<insert id="add" parameterType="com.kedacom.expenses.model.expenses.ExpPaymentH"
+	useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO exp_payment_h
+		(<include refid="columns"/>)
+		VALUES
+		(#{id,jdbcType=NUMERIC},#{processesId,jdbcType=NUMERIC},#{billType,jdbcType=NUMERIC},#{billCode,jdbcType=VARCHAR},#{applyerId,jdbcType=NUMERIC},#{applyerName,jdbcType=VARCHAR},#{applyDeptId,jdbcType=NUMERIC},#{applyDeptName,jdbcType=VARCHAR},#{billState,jdbcType=NUMERIC},#{billNum,jdbcType=NUMERIC},#{realBillNum,jdbcType=NUMERIC},#{paymentAmount,jdbcType=NUMERIC},#{residualAmount,jdbcType=NUMERIC},#{isFinish,jdbcType=NUMERIC},#{realPaymentAmount,jdbcType=NUMERIC},#{takeDeptId,jdbcType=NUMERIC},#{takeDeptName,jdbcType=VARCHAR},#{descript,jdbcType=VARCHAR},#{approveId,jdbcType=NUMERIC},#{approveName,jdbcType=VARCHAR},#{approveDate,jdbcType=TIMESTAMP},#{approveNote,jdbcType=VARCHAR},#{specialtyBus,jdbcType=NUMERIC},#{isTakeDepts,jdbcType=NUMERIC},#{createby,jdbcType=NUMERIC},#{createtime,jdbcType=TIMESTAMP},#{updatetime,jdbcType=TIMESTAMP},#{updateby,jdbcType=NUMERIC},#{dataSource,jdbcType=NUMERIC})
+	</insert>
+	
+	<delete id="delById" parameterType="java.lang.Long">
+		DELETE FROM exp_payment_h 
+		WHERE
+		id=#{id}
+	</delete>
+	
+	
+	<update id="update" parameterType="com.kedacom.expenses.model.expenses.ExpPaymentH">
+		UPDATE exp_payment_h  SET
+		id=#{id,jdbcType=NUMERIC},
+		processes_id=#{processesId,jdbcType=NUMERIC},
+		bill_type=#{billType,jdbcType=NUMERIC},
+		bill_code=#{billCode,jdbcType=VARCHAR},
+		applyer_id=#{applyerId,jdbcType=NUMERIC},
+		applyer_name=#{applyerName,jdbcType=VARCHAR},
+		apply_dept_id=#{applyDeptId,jdbcType=NUMERIC},
+		apply_dept_name=#{applyDeptName,jdbcType=VARCHAR},
+		bill_state=#{billState,jdbcType=NUMERIC},
+		bill_num=#{billNum,jdbcType=NUMERIC},
+		real_bill_num=#{realBillNum,jdbcType=NUMERIC},
+		payment_amount=#{paymentAmount,jdbcType=NUMERIC},
+		residual_amount=#{residualAmount,jdbcType=NUMERIC},
+		is_finish=#{isFinish,jdbcType=NUMERIC},
+		real_payment_amount=#{realPaymentAmount,jdbcType=NUMERIC},
+		take_dept_id=#{takeDeptId,jdbcType=NUMERIC},
+		take_dept_name=#{takeDeptName,jdbcType=VARCHAR},
+		descript=#{descript,jdbcType=VARCHAR},
+		approve_id=#{approveId,jdbcType=NUMERIC},
+		approve_name=#{approveName,jdbcType=VARCHAR},
+		approve_date=#{approveDate,jdbcType=TIMESTAMP},
+		approve_note=#{approveNote,jdbcType=VARCHAR},
+		specialty_bus=#{specialtyBus,jdbcType=NUMERIC},
+		is_take_depts=#{isTakeDepts,jdbcType=NUMERIC},
+		createby=#{createby,jdbcType=NUMERIC},
+		createtime=#{createtime,jdbcType=TIMESTAMP},
+		updatetime=#{updatetime,jdbcType=TIMESTAMP},
+		datasource=#{dataSource,jdbcType=NUMERIC},
+		updateby=#{updateby,jdbcType=NUMERIC}
+		WHERE
+		id=#{id}
+	</update>
+	
+	<!-- 更新审批意见 -->
+	<update id="upApNote" parameterType="java.lang.Long">
+		UPDATE exp_payment_h  SET
+		approve_note=#{approveNote,jdbcType=VARCHAR}
+		WHERE
+		id=#{id}
+	</update>
+	
+	<!-- 更新审批状态为驳回 -->
+	<update id="upReject" parameterType="java.lang.Long">
+		UPDATE exp_payment_h  SET
+		bill_state=2
+		WHERE
+		id=#{id}
+	</update>
+	
+	<!-- 更新审批状态为完成 -->
+	<update id="upFinish" parameterType="java.lang.Long">
+		UPDATE exp_payment_h  SET
+		bill_state=3
+		WHERE
+		id=#{id}
+	</update>
+	
+	<select id="getById" parameterType="java.lang.Long" resultMap="ExpPaymentH" useCache="true">
+		SELECT <include refid="columns"/>
+		FROM exp_payment_h
+		WHERE id=#{id}
+	</select>
+	
+	<select id="getAll" resultMap="ExpPaymentH" useCache="false">
+		SELECT <include refid="columns"/>
+		FROM exp_payment_h   
+		<include refid="dynamicWhere" />
+		<if test="@Ognl@isNotEmpty(orderField)">
+		order by ${orderField} ${orderSeq}
+		</if>
+		<if test="@Ognl@isEmpty(orderField)">
+		order by id  desc
+		</if>
+	</select>
+	
+	<select id="getAllAsc" resultMap="ExpPaymentH" useCache="false">
+			SELECT <include refid="columns"/>
+			FROM exp_payment_h   
+			<include refid="dynamicWhere" />
+			<if test="@Ognl@isNotEmpty(orderField)">
+			order by ${orderField} ${orderSeq}
+			</if>
+			<if test="@Ognl@isEmpty(orderField)">
+			order by createtime  asc
+			</if>
+	</select>
+	
+	<!-- 根据流程ID查找单据 -->
+	<select id="getByProcessId" resultMap="ExpPaymentH" parameterType="java.lang.Long" >
+		SELECT <include refid="columns"/>
+		FROM exp_payment_h   
+		where processes_id =#{processesId,jdbcType=VARCHAR}
+	</select>
+	
+	<!-- 更新主表信息 -->
+	<update id="editMain" parameterType="java.util.Map">
+		UPDATE exp_payment_h  SET
+		descript=#{descript},
+		take_dept_name=#{takeDeptName},
+		take_dept_id=#{takeDeptId},
+		bill_num=#{billNum},
+		payment_amount=#{paymentAmount}
+		where id =#{id}
+	</update>
+	
+	<!-- 更新主表信息描述 -->
+	<update id="updateBillState" parameterType="java.util.Map">
+		UPDATE exp_payment_h  SET
+		processes_id=#{processesId},
+		bill_state=#{billState}
+		where id =#{id}
+	</update>
+	
+	<!-- 活动报表 -->
+	<select id="chartsAct" resultMap="Map" parameterType="java.util.Map">
+		SELECT h.actId,
+			h.name,
+			h.beginDate,
+			h.amount,
+			b.totalAmount,
+			h.hid,
+			h.applyerId,
+			h.applyerName
+			FROM (SELECT
+			        b.act_id       AS actId,
+			        ca.act_desc    AS name,
+			        DATE_FORMAT(b.begin_date,'%Y-%m') AS beginDate,
+			        SUM(b.amount)  AS amount,
+			        h.id           AS hid,
+			        h.applyer_id   AS applyerId,
+			        h.applyer_name AS applyerName
+			      FROM exp_payment_h h
+			        LEFT JOIN exp_payment_b b
+			          ON h.id = b.expenses_h_id
+			        LEFT JOIN conf_activitity ca
+          			  ON b.act_id = ca.id
+			      WHERE h.applyer_id = #{applerId}
+			      AND b.act_id = #{actId}
+
+			      GROUP BY b.act_id,DATE_FORMAT(b.begin_date,'%Y-%m')) h
+			  LEFT JOIN (SELECT
+			               b.act_id AS actId,
+			               SUM(b.amount) AS totalAmount,
+			               DATE_FORMAT(b.begin_date,'%Y-%m') AS beginDate
+			             FROM exp_payment_b b
+			             GROUP BY b.act_id,DATE_FORMAT(b.begin_date,'%Y-%m')) b
+			    ON b.actId = h.actId AND b.beginDate = h.beginDate
+	</select>
+	
+	<!-- 个人报表 -->
+	<select id="chartsPer" resultMap="Map" parameterType="java.util.Map">
+		SELECT *
+			FROM (SELECT
+			        h.applyer_id   AS applyerId,
+			        h.applyer_name AS applyerName,
+			        DATE_FORMAT(b.begin_date,'%Y-%m') AS beginDate,
+			        SUM(b.amount)  AS amount
+			      FROM exp_payment_h h
+			        LEFT JOIN exp_payment_b b
+			          ON h.id = b.expenses_h_id
+			      WHERE h.applyer_id = #{applerId}
+			      GROUP BY beginDate
+			      ORDER BY beginDate DESC
+			      LIMIT 12 ) t
+			ORDER BY t.beginDate ASC
+	</select>
+	
+	
+	<!-- 商机报表 -->
+	<select id="chartsBus" resultMap="Map" parameterType="java.util.Map">
+		SELECT
+		  h.busId,
+		  h.name,
+		  h.beginDate,
+		  h.amount,
+		  b.totalAmount,
+		  h.hid,
+		  h.applyerId,
+		  h.applyerName
+		FROM (SELECT
+		        b.bus_id       AS busId,
+		        cb.bo_name     AS `name`,
+		        DATE_FORMAT(b.begin_date,'%Y-%m') AS beginDate,
+		        SUM(b.amount)  AS amount,
+		        h.id           AS hid,
+		        h.applyer_id   AS applyerId,
+		        h.applyer_name AS applyerName
+		      FROM exp_payment_h h
+		        LEFT JOIN exp_payment_b b
+		          ON h.id = b.expenses_h_id
+		        LEFT JOIN conf_business_opportunity cb
+		          ON b.bus_id = cb.id
+		      WHERE h.applyer_id = #{applerId}
+		          AND b.bus_id = #{busId}
+		      GROUP BY b.bus_id,DATE_FORMAT(b.begin_date,'%Y-%m')) h
+		  LEFT JOIN (SELECT
+		               b.bus_id       AS busId,
+		               SUM(b.amount)  AS totalAmount,
+		               DATE_FORMAT(b.begin_date,'%Y-%m') AS beginDate
+		             FROM exp_payment_b b
+		             GROUP BY b.bus_id,DATE_FORMAT(b.begin_date,'%Y-%m')) b
+		    ON b.busId = h.busId
+		      AND b.beginDate = h.beginDate
+	</select>
+	<!-- 客户报表 -->
+	<select id="chartsCus" resultMap="Map" parameterType="java.util.Map">
+		SELECT *
+			FROM (SELECT
+			        h.cusId,
+			        h.name,
+			        h.beginDate,
+			        h.amount,
+			        b.totalAmount,
+			        h.hid,
+			        h.applyerId,
+			        h.applyerName
+			      FROM (SELECT
+			              b.cus_id       AS cusId,
+			              cc.client_name AS `name`,
+			              DATE_FORMAT(b.begin_date,'%Y-%m') AS beginDate,
+			              SUM(b.amount)  AS amount,
+			              h.id           AS hid,
+			              h.applyer_id   AS applyerId,
+			              h.applyer_name AS applyerName
+			            FROM exp_payment_h h
+			              LEFT JOIN exp_payment_b b
+			                ON h.id = b.expenses_h_id
+			              LEFT JOIN conf_client cc
+			                ON b.cus_id = cc.id
+			            WHERE h.applyer_id = #{applerId}
+			                AND b.cus_id = #{cusId}
+			            GROUP BY b.cus_id,DATE_FORMAT(b.begin_date,'%Y-%m')) h
+			        LEFT JOIN (SELECT
+			                     b.cus_id       AS cusId,
+			                     SUM(b.amount)  AS totalAmount,
+			                     DATE_FORMAT(b.begin_date,'%Y-%m') AS beginDate
+			                   FROM exp_payment_b b
+			                   GROUP BY b.cus_id,DATE_FORMAT(b.begin_date,'%Y-%m')) b
+			          ON b.cusId = h.cusId
+			            AND b.beginDate = h.beginDate
+			      ORDER BY beginDate DESC
+			      LIMIT 12 ) t
+			ORDER BY beginDate asc
+	</select>
+	
+	<!--获取用户邮箱账号 -->
+	<select id="getUserAccount"  parameterType="java.lang.Long"  resultType="java.lang.String">
+		SELECT   T2.account as account
+		FROM exp_payment_h T1
+		 left join   sys_user   T2 on T1.applyer_id=T2.userid
+		WHERE id=#{id}
+	</select>
+	
+
+</mapper>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.kedacom.expenses.model.qq.QQNeedAdd">
+	<resultMap id="QQNeedAdd" type="com.kedacom.expenses.model.qq.QQNeedAdd">
+			<id property="id" column="id" jdbcType="NUMERIC"/>
+			<result property="qq_num" column="qq_num" jdbcType="VARCHAR"/>
+			<result property="sex" column="sex" jdbcType="NUMERIC"/>
+			<result property="age" column="age" jdbcType="VARCHAR"/>
+			<result property="state" column="state" jdbcType="NUMERIC"/>
+	</resultMap>
+	
+	<sql id="columns">
+		id ,qq_num ,sex ,age ,state 
+	</sql>
+	
+	<sql id="dynamicWhere">
+		<where>
+				<if test="@Ognl@isNotEmpty(qq_num)"> AND qq_num LIKE '%${qq_num}%' </if>
+				<if test="@Ognl@isNotEmpty(sex)"> AND sex = #{sex} </if>
+				<if test="@Ognl@isNotEmpty(age)"> AND age LIKE '%${age}%' </if>
+				<if test="@Ognl@isNotEmpty(state)"> AND state = #{state} </if>
+		</where>
+	</sql>
+	
+	<insert id="add" parameterType="com.kedacom.expenses.model.qq.QQNeedAdd">
+		INSERT INTO qq_need_add
+		(<include refid="columns"/>)
+		VALUES
+		(#{id,jdbcType=NUMERIC},#{qq_num,jdbcType=VARCHAR},#{sex,jdbcType=NUMERIC},#{age,jdbcType=VARCHAR},#{state,jdbcType=NUMERIC})
+	</insert>
+	
+	<delete id="delById" parameterType="java.lang.Long">
+		DELETE FROM qq_need_add 
+		WHERE
+		id=#{id}
+	</delete>
+	
+	
+	<update id="update" parameterType="com.kedacom.expenses.model.qq.QQNeedAdd">
+		UPDATE qq_need_add  SET
+		id=#{id,jdbcType=NUMERIC},
+		qq_num=#{qq_num,jdbcType=VARCHAR},
+		sex=#{sex,jdbcType=NUMERIC},
+		age=#{age,jdbcType=VARCHAR},
+		state=#{state,jdbcType=NUMERIC}
+		WHERE
+		id=#{id}
+	</update>
+	
+	<update id="updateStateByNum" parameterType="com.kedacom.expenses.model.qq.QQNeedAdd">
+		UPDATE qq_need_add  SET
+		state=#{state,jdbcType=NUMERIC}
+		WHERE
+		qq_num=#{qq_num,jdbcType=VARCHAR}
+	</update>
+	
+	<select id="getById" parameterType="java.lang.Long" resultMap="QQNeedAdd" useCache="true">
+		SELECT <include refid="columns"/>
+		FROM qq_need_add
+		WHERE id=#{id}
+	</select>
+	
+	<select id="getAll" resultMap="QQNeedAdd" useCache="false">
+		SELECT <include refid="columns"/>
+		FROM qq_need_add   
+		<include refid="dynamicWhere" />
+		<if test="@Ognl@isNotEmpty(orderField)">
+		order by ${orderField} ${orderSeq}
+		</if>
+		<if test="@Ognl@isEmpty(orderField)">
+		order by id  desc
+		</if>
+	</select>
+	
+	<select id="getStateEQZero" parameterType="java.lang.Long" resultMap="QQNeedAdd" useCache="true">
+		SELECT <include refid="columns"/>
+		FROM qq_need_add
+		WHERE state=#{state,jdbcType=NUMERIC}
+		limit 0,1
+	</select>
+</mapper>

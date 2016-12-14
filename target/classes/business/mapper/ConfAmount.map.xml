@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kedacom.expenses.model.baseconfig.ConfAmount">
+	<resultMap id="ConfAmount"
+		type="com.kedacom.expenses.model.baseconfig.ConfAmount">
+		<id property="id" column="id" jdbcType="NUMERIC" />
+		<result property="cost_subject_code" column="cost_subject_code"
+			jdbcType="VARCHAR" />
+		<result property="claim_cost" column="claim_cost" jdbcType="NUMERIC" />
+		<result property="state" column="state" jdbcType="NUMERIC" />
+		<result property="user_or_dept_id" column="user_or_dept_id" jdbcType="NUMERIC" />
+		<result property="type" column="type" jdbcType="NUMERIC" />
+	</resultMap>
+
+	<resultMap id="MyMap" type="java.util.Map">
+		<id property="id" column="id" jdbcType="NUMERIC" />
+		<result property="cost_subject_code" column="cost_subject_code" jdbcType="VARCHAR" />
+		<result property="userid" column="userid" jdbcType="NUMERIC" />
+		<result property="claim_cost" column="claim_cost" jdbcType="NUMERIC" />
+		<result property="state" column="state" jdbcType="NUMERIC" />
+		<result property="user_or_dept_id" column="user_or_dept_id" jdbcType="NUMERIC" />
+		<result property="fullname" column="fullname" jdbcType="VARCHAR" />
+		<result property="posid" column="posid" jdbcType="NUMERIC" />
+		<result property="posname" column="posname" jdbcType="VARCHAR" />
+	</resultMap>
+
+
+	<sql id="columns">
+		id ,cost_subject_code ,claim_cost ,state ,user_or_dept_id, type
+	</sql>
+
+	<sql id="dynamicWhere">
+		<where>
+			<if test="@Ognl@isNotEmpty(cost_subject_code)"> AND cost_subject_code = #{cost_subject_code} </if>
+			<if test="@Ognl@isNotEmpty(claim_cost)"> AND claim_cost = #{claim_cost} </if>
+			<if test="@Ognl@isNotEmpty(state)"> AND state = #{state} </if>
+			<if test="@Ognl@isNotEmpty(user_or_dept_id)"> AND user_or_dept_id = #{user_or_dept_id} </if>
+			<if test="@Ognl@isNotEmpty(type)"> AND type = #{type} </if>
+		</where>
+	</sql>
+
+	<insert id="add" parameterType="com.kedacom.expenses.model.baseconfig.ConfAmount">
+		INSERT INTO conf_amount
+		(
+		<include refid="columns" />
+		)
+		VALUES
+		(#{id,jdbcType=NUMERIC},#{cost_subject_code,jdbcType=NUMERIC},#{claim_cost,jdbcType=NUMERIC},#{state,jdbcType=NUMERIC},#{user_or_dept_id,jdbcType=NUMERIC},#{type,jdbcType=NUMERIC})
+	</insert>
+
+	<delete id="delById" parameterType="java.lang.Long">
+		DELETE FROM conf_amount
+		WHERE
+		id=#{id}
+	</delete>
+
+
+	<update id="update" parameterType="com.kedacom.expenses.model.baseconfig.ConfAmount">
+		UPDATE conf_amount SET
+		id=#{id,jdbcType=NUMERIC},
+		cost_subject_code=#{cost_subject_code,jdbcType=VARCHAR},
+		claim_cost=#{claim_cost,jdbcType=NUMERIC},
+		state=#{state,jdbcType=NUMERIC},
+		user_or_dept_id=#{user_or_dept_id,jdbcType=NUMERIC},
+		type=#{type,jdbcType=NUMERIC}
+		WHERE
+		id=#{id}
+	</update>
+
+	<!-- 
+	<select id="getByName" parameterType="java.util.Map"
+		resultMap="MyMap">
+		SELECT
+		c.id as id,
+		s.USERID as user_or_dept_id,
+		s.FULLNAME as fullname,
+		sp.POSNAME as posname,
+		c.claim_cost as claim_cost,
+		c.state as state
+		FROM sys_user s
+		LEFT JOIN conf_amount c
+		ON s.USERID = c.user_or_dept_id
+		LEFT JOIN sys_user_pos p
+		ON p.USERID = s.USERID
+		LEFT JOIN sys_position sp
+		ON p.POSID = sp.POSID
+		,conf_cost_subject_type st  
+		WHERE p.ISPRIMARY = 1
+		AND st.ctrl_amount = 1
+		AND st.code=#{code}
+		<if test="@Ognl@isNotEmpty(fullname)"> AND fullname like '%${fullname}%'</if>
+	</select>
+ -->
+	<select id="getById" parameterType="java.lang.Long" resultMap="ConfAmount"
+		useCache="true">
+		SELECT
+		<include refid="columns" />
+		FROM conf_amount
+		WHERE id=#{id}
+	</select>
+
+	<!-- 根据人员获取账户额度  -->
+	<select id="getAllByPerson" resultMap="MyMap">
+		SELECT
+		  ca.ID AS id,
+		  su.USERID AS userOrPostId,
+		  su.FULLNAME AS name,
+		  1 AS type,
+		  ca.cost_subject_code ,
+		  ca.claim_cost ,
+		  ca.state  
+		FROM sys_user su
+		  LEFT JOIN conf_amount ca
+		    ON su.USERID = ca.user_or_dept_id
+		     AND ca.cost_subject_code = #{code}
+		     WHERE su.STATUS = 1
+		     AND su.USERID != 1
+     		<if test="@Ognl@isNotEmpty(name)"> AND su.fullname like '%${name}%'</if>
+     		<if test="state == 1"> AND ca.state = #{state}</if>
+     		<if test="state == 0"> AND ca.state IS NULL</if>
+	</select>
+	
+	<!-- 根据岗位获取账户额度 	-->
+	<select id="getAllByPos" resultMap="MyMap">
+		 SELECT
+		  ca.ID AS id,
+		  sp.posid AS userOrPostId,
+		  sp.posname AS name,
+		  2 AS type,
+		  ca.cost_subject_code ,
+		  ca.claim_cost ,
+		  ca.state  
+		FROM sys_position sp
+		  LEFT JOIN conf_amount ca
+		    ON sp.posid = ca.user_or_dept_id
+		    AND ca.cost_subject_code = #{code}
+		    AND ca.state = 1
+		    WHERE 1 = 1
+		    <if test="@Ognl@isNotEmpty(name)"> AND sp.posname like '%${name}%'</if>
+		    <if test="state == 1"> AND ca.state = #{state}</if>
+     		<if test="state == 0"> AND ca.state IS NULL</if>
+	</select>
+
+	
+		<select id="getAll" resultMap="ConfAmount" useCache="false">
+		SELECT
+		<include refid="columns" />
+		FROM conf_amount
+		<include refid="dynamicWhere" />
+		<if test="@Ognl@isNotEmpty(orderField)">
+			order by ${orderField} ${orderSeq}
+		</if>
+		<if test="@Ognl@isEmpty(orderField)">
+			order by id desc
+		</if>
+	</select>
+	
+	
+	<!-- 根据岗位获取账户额度 -->
+	<select id="getAmountForPos" parameterType="list" resultMap="ConfAmount"
+		useCache="true">
+		 <![CDATA[
+		SELECT *
+		FROM conf_amount
+		WHERE   type=2   and state=1  and user_or_dept_id  in 
+		   ]]>
+		   <foreach collection="list" item="ids"  open="(" separator="," close=")">  
+           #{user_or_dept_id}
+         </foreach>
+         order by claim_cost desc 
+	</select>
+	
+	<!-- 根据用户ID查找岗位ID -->
+	<select id="getPosIdByUserId" parameterType="java.lang.Long" resultType="java.lang.Long">
+		SELECT
+		  POSID
+		FROM sys_user_pos
+		WHERE ISPRIMARY = 1
+		    AND userid = #{userid}
+	</select>
+	
+	
+	<!-- 获取配置额度-->
+	<select id="getAmount" parameterType="java.util.Map" resultMap="ConfAmount"
+		useCache="true">
+		SELECT
+		  ID,
+		  cost_subject_code,
+		  claim_cost,
+		  state,
+		  user_or_dept_id,
+		  TYPE
+		FROM conf_amount
+		WHERE cost_subject_code = #{costSubjectCode}
+		AND
+		(
+		user_or_dept_id = #{userid}
+		OR
+		user_or_dept_id = #{posid}
+		)
+		ORDER BY `type` asc
+	</select>
+</mapper>

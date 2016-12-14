@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.kedacom.expenses.model.baseconfig.ConfPerCoster">
+	<resultMap id="ConfPerCoster" type="com.kedacom.expenses.model.baseconfig.ConfPerCoster">
+			<id property="id" column="id" jdbcType="NUMERIC"/>
+			<result property="person_id" column="person_id" jdbcType="VARCHAR"/>
+			<result property="person_code" column="person_code" jdbcType="VARCHAR"/>
+			<result property="person_name" column="person_name" jdbcType="VARCHAR"/>
+			<result property="coster_ids" column="coster_ids" jdbcType="VARCHAR"/>
+			<result property="coster_names" column="coster_names" jdbcType="VARCHAR"/>
+			<result property="finance_ids" column="finance_ids" jdbcType="VARCHAR"/>
+			<result property="finance_names" column="finance_names" jdbcType="VARCHAR"/>
+			 <result column="financecost_id" property="financeCostPk" jdbcType="VARCHAR" />
+   			 <result column="financecost_name" property="financeCostName" jdbcType="VARCHAR" />
+			<result property="def1" column="def1" jdbcType="VARCHAR"/>
+			<result property="def2" column="def2" jdbcType="VARCHAR"/>
+			<result property="def3" column="def3" jdbcType="VARCHAR"/>
+			<result property="def4" column="def4" jdbcType="VARCHAR"/>
+			<result property="def5" column="def5" jdbcType="VARCHAR"/>
+	</resultMap>
+	
+	<sql id="columns">
+		id ,person_id ,person_code ,person_name ,coster_ids ,coster_names ,finance_ids ,finance_names ,financecost_id,financecost_name,def1 ,def2 ,def3 ,def4 ,def5 
+	</sql>
+	
+	<sql id="dynamicWhere">
+		<where>
+				<if test="@Ognl@isNotEmpty(person_id)"> AND person_id LIKE '%${person_id}%' </if>
+				<if test="@Ognl@isNotEmpty(person_code)"> AND person_code LIKE '%${person_code}%' </if>
+				<if test="@Ognl@isNotEmpty(person_name)"> AND person_name LIKE '%${person_name}%' </if>
+				<if test="@Ognl@isNotEmpty(coster_ids)"> AND coster_ids LIKE '%${coster_ids}%' </if>
+				<if test="@Ognl@isNotEmpty(coster_names)"> AND coster_names LIKE '%${coster_names}%' </if>
+				<if test="@Ognl@isNotEmpty(finance_ids)"> AND finance_ids LIKE '%${finance_ids}%' </if>
+				<if test="@Ognl@isNotEmpty(finance_names)"> AND finance_names LIKE '%${finance_names}%' </if>
+				<if test="@Ognl@isNotEmpty(financeCostPk)"> AND financecost_id  LIKE '%${financeCostPk}%' </if>
+		        <if test="@Ognl@isNotEmpty(financeCostName)"> AND financecost_name  LIKE '%${financeCostName}%'  </if>
+				<if test="@Ognl@isNotEmpty(def1)"> AND def1 LIKE '%${def1}%' </if>
+				<if test="@Ognl@isNotEmpty(def2)"> AND def2 LIKE '%${def2}%' </if>
+				<if test="@Ognl@isNotEmpty(def3)"> AND def3 LIKE '%${def3}%' </if>
+				<if test="@Ognl@isNotEmpty(def4)"> AND def4 LIKE '%${def4}%' </if>
+				<if test="@Ognl@isNotEmpty(def5)"> AND def5 LIKE '%${def5}%' </if>
+		</where>
+	</sql>
+	
+	<insert id="add" parameterType="com.kedacom.expenses.model.baseconfig.ConfPerCoster">
+		INSERT INTO conf_per_coster
+		(<include refid="columns"/>)
+		VALUES
+		(#{id,jdbcType=NUMERIC},#{person_id,jdbcType=VARCHAR},#{person_code,jdbcType=VARCHAR},#{person_name,jdbcType=VARCHAR},#{coster_ids,jdbcType=VARCHAR},
+		#{coster_names,jdbcType=VARCHAR},#{finance_ids,jdbcType=VARCHAR},#{finance_names,jdbcType=VARCHAR},
+		#{financeCostPk,jdbcType=VARCHAR},#{financeCostName,jdbcType=VARCHAR},
+		#{def1,jdbcType=VARCHAR},#{def2,jdbcType=VARCHAR},#{def3,jdbcType=VARCHAR},#{def4,jdbcType=VARCHAR},#{def5,jdbcType=VARCHAR})
+	</insert>
+	
+	<delete id="delById" parameterType="java.lang.Long">
+		DELETE FROM conf_per_coster 
+		WHERE
+		id=#{id}
+	</delete>
+	
+	
+	<update id="update" parameterType="com.kedacom.expenses.model.baseconfig.ConfPerCoster">
+		UPDATE conf_per_coster  SET
+		id=#{id,jdbcType=NUMERIC},
+		person_id=#{person_id,jdbcType=VARCHAR},
+		person_code=#{person_code,jdbcType=VARCHAR},
+		person_name=#{person_name,jdbcType=VARCHAR},
+		coster_ids=#{coster_ids,jdbcType=VARCHAR},
+		coster_names=#{coster_names,jdbcType=VARCHAR},
+		finance_ids=#{finance_ids,jdbcType=VARCHAR},
+		finance_names=#{finance_names,jdbcType=VARCHAR},
+		financecost_id=#{financeCostPk,jdbcType=VARCHAR},
+      	financecost_name=#{financeCostName,jdbcType=VARCHAR},
+		def1=#{def1,jdbcType=VARCHAR},
+		def2=#{def2,jdbcType=VARCHAR},
+		def3=#{def3,jdbcType=VARCHAR},
+		def4=#{def4,jdbcType=VARCHAR},
+		def5=#{def5,jdbcType=VARCHAR}
+		WHERE
+		id=#{id}
+	</update>
+	
+	
+	<select id="getById" parameterType="java.lang.Long" resultMap="ConfPerCoster" useCache="true">
+		SELECT <include refid="columns"/>
+		FROM conf_per_coster
+		WHERE id=#{id}
+	</select>
+	
+	<select id="getAll" resultMap="ConfPerCoster" useCache="false">
+		SELECT <include refid="columns"/>
+		FROM conf_per_coster   
+		<include refid="dynamicWhere" />
+		<if test="@Ognl@isNotEmpty(orderField)">
+		order by ${orderField} ${orderSeq}
+		</if>
+		<if test="@Ognl@isEmpty(orderField)">
+		order by id  desc
+		</if>
+	</select>
+</mapper>

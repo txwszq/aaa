@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kedacom.expenses.model.baseconfig.ConfActivity" >
+  <resultMap id="ConfActivity" type="com.kedacom.expenses.model.baseconfig.ConfActivity" >
+    <id column="ID" property="id" jdbcType="BIGINT" />
+    <result column="source" property="source" jdbcType="BIT" />
+    <result column="out_act_id" property="outActId" jdbcType="VARCHAR" />
+    <result column="act_desc" property="actDesc" jdbcType="VARCHAR" />
+    <result column="act_create_code" property="actCreaterCode" jdbcType="VARCHAR" />
+    <result column="act_begin" property="actBegin" jdbcType="TIMESTAMP" />
+    <result column="act_end" property="actEnd" jdbcType="TIMESTAMP" />
+    <result column="bus_id" property="busId" jdbcType="VARCHAR" />
+    <result column="bus_name" property="busName" jdbcType="VARCHAR" />
+    <result column="bus_code" property="busCode" jdbcType="VARCHAR" />
+    <result column="bus_budget" property="busBudGet" jdbcType="VARCHAR" />
+    <result column="is_project" property="isProject" jdbcType="BIT" />
+    <result column="bus_begin" property="busBegin" jdbcType="TIMESTAMP" />
+    <result column="bus_end" property="busEnd" jdbcType="TIMESTAMP" />
+    <result column="bus_take_code" property="busTakerCode" jdbcType="VARCHAR" />
+    <result column="cus_id" property="cusId" jdbcType="VARCHAR" /> 
+    <result column="cus_name" property="cusName" jdbcType="VARCHAR" /> 
+    <result column="cus_state" property="cusState" jdbcType="VARCHAR" /> 
+    <result column="cus_take_code" property="cusTakerCode" jdbcType="VARCHAR" />    
+  </resultMap>
+  
+  <sql id="columns" >
+    id,  source, out_act_id, act_desc, act_create_code,  act_begin, act_end,bus_id,bus_name,bus_code,bus_budget,
+    is_project,bus_begin,bus_end, bus_take_code,cus_id,cus_name,cus_state,cus_take_code
+  </sql>
+  
+  <sql id="dynamicWhere" >
+  	<where >
+  		<if test="@Ognl@isNotEmpty(id)"> AND id  =#{id} </if>
+		<if test="@Ognl@isNotEmpty(source)"> AND source  = #{source}  </if>
+		<if test="@Ognl@isNotEmpty(outActId)"> AND out_act_id   =#{outActId}   </if>
+		<if test="@Ognl@isNotEmpty(actDesc)"> AND act_desc  LIKE '%${actDesc}%'  </if>
+		<if test="@Ognl@isNotEmpty(actCreaterCode)"> AND act_create_code  LIKE '%${actCreaterCode}%' </if>
+		<if test="@Ognl@isNotEmpty(actBegin)"> AND act_begin  >= #{actBegin}  </if>
+		<if test="@Ognl@isNotEmpty(actEnd)"> AND act_end   &lt;= #{actEnd} </if>
+		<if test="@Ognl@isNotEmpty(busId)"> AND bus_id  =#{busId} </if>
+		<if test="@Ognl@isNotEmpty(busName)"> AND bus_name  LIKE '%${busName}%' </if>
+		<if test="@Ognl@isNotEmpty(busCode)"> AND bus_code  like '%${busCode}%' </if>
+		<if test="@Ognl@isNotEmpty(busBudGet)"> AND busBudGet  =#{busBudGet} </if>
+		<if test="@Ognl@isNotEmpty(isProject)"> AND isProject  =#{isProject} </if>
+		<if test="@Ognl@isNotEmpty(busBegin)"> AND bus_begin  >= #{busBegin} </if>
+		<if test="@Ognl@isNotEmpty(busEnd)"> AND bus_end  &lt;=#{busEnd} </if>		
+		<if test="@Ognl@isNotEmpty(busTakerCode)"> AND bus_take_code  like  '%${busTakerCode}%' </if>		
+		<if test="@Ognl@isNotEmpty(cusId)"> AND cus_id  =#{cusId} </if>						
+		<if test="@Ognl@isNotEmpty(cusName)"> AND cus_name     like  '%${cusName}%' </if>
+		<if test="@Ognl@isNotEmpty(cusState)"> AND cus_state  =#{cusState} </if>
+		<if test="@Ognl@isNotEmpty(cusTakerCode)"> AND cus_take_code   like  '%${cusTakerCode}%' </if>									
+    </where>
+  </sql>
+  
+  <insert id="add" parameterType="com.kedacom.expenses.model.baseconfig.ConfActivity">
+  		<selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
+      		SELECT LAST_INSERT_ID()
+    	</selectKey>
+		INSERT INTO conf_activitity
+		(source, out_act_id, act_desc, act_create_code, act_begin, act_end,bus_id,bus_name,bus_code,bus_budget,
+		is_project,bus_begin,bus_end,bus_take_code,cus_id,cus_name,cus_state,cus_take_code)
+		VALUES
+		 (
+			 #{source,jdbcType=BIT}, #{outActId,jdbcType=VARCHAR}, #{actDesc,jdbcType=VARCHAR}, 
+	         #{actCreaterCode,jdbcType=VARCHAR}, #{actBegin,jdbcType=TIMESTAMP}, #{actEnd,jdbcType=TIMESTAMP},
+	         #{busId,jdbcType=VARCHAR}, #{busName,jdbcType=VARCHAR}, #{busCode,jdbcType=VARCHAR},#{busBudGet,jdbcType=VARCHAR},
+	         #{isProject,jdbcType=BIT},#{busBegin,jdbcType=TIMESTAMP},#{busEnd,jdbcType=TIMESTAMP},#{busTakerCode,jdbcType=VARCHAR},
+	         #{cusId,jdbcType=VARCHAR},#{cusName,jdbcType=VARCHAR},#{cusState,jdbcType=VARCHAR},#{cusTakerCode,jdbcType=VARCHAR}
+         )
+	</insert>
+	
+	<delete id="delById" parameterType="java.lang.Long">
+		DELETE FROM conf_activitity 
+		WHERE
+		ID=#{id,jdbcType=BIGINT}
+	</delete>
+	
+    
+	<update id="update" parameterType="com.kedacom.expenses.model.baseconfig.ConfActivity">
+		update conf_activitity
+    	set source = #{source,jdbcType=BIT},
+      	out_act_id =#{outActId,jdbcType=VARCHAR},
+      	act_desc = #{actDesc,jdbcType=VARCHAR},
+      	act_create_code = #{actCreaterCode,jdbcType=VARCHAR},
+      	act_begin = #{actBegin,jdbcType=TIMESTAMP},
+      	act_end = #{actEnd,jdbcType=TIMESTAMP},
+      	bus_id = #{busId,jdbcType=VARCHAR},
+      	bus_name = #{busName,jdbcType=VARCHAR},
+      	bus_code = #{busCode,jdbcType=VARCHAR},
+      	bus_budget = #{busBudGet,jdbcType=VARCHAR},
+      	is_project = #{isProject,jdbcType=BIT},
+      	bus_begin = #{busBegin,jdbcType=TIMESTAMP},
+      	bus_end = #{busEnd,jdbcType=TIMESTAMP},
+      	bus_take_code = #{busTakerCode,jdbcType=VARCHAR},
+      	cus_id =#{cusId,jdbcType=VARCHAR},
+      	cus_name = #{cusName,jdbcType=VARCHAR},
+      	cus_state =#{cusState,jdbcType=VARCHAR},
+      	cus_take_code = #{cusTakerCode,jdbcType=VARCHAR}
+    	where id = #{id,jdbcType=BIGINT}
+	</update>
+	
+	<select id="getById" parameterType="java.lang.Long" resultMap="ConfActivity">
+		SELECT <include refid="columns"/>
+		FROM conf_activitity
+		WHERE
+		ID = #{id,jdbcType=BIGINT}
+	</select>
+	
+
+	
+	
+	<select id="getAll" resultMap="ConfActivity">
+		SELECT <include refid="columns"/>
+		FROM conf_activitity   
+		<include refid="dynamicWhere" />
+		<if test="@Ognl@isNotEmpty(orderField)">
+		order by ${orderField} ${orderSeq}
+		</if>
+		<if test="@Ognl@isEmpty(orderField)">
+		order by id  desc
+		</if>
+	</select>
+	
+	<select id="getAllByOtherTaker" resultMap="ConfActivity" parameterType="java.lang.Long">
+		SELECT ca.*
+		FROM conf_activitity ca
+		left join conf_other_taker cotaker on ca.id = cotaker.business_id
+		where cotaker.type = 3
+		and cotaker.user_id = #{userId,jdbcType=NUMERIC}
+		order by id  desc
+	</select>
+  
+</mapper>

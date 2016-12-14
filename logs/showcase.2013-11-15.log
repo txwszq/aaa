@@ -1,0 +1,824 @@
+09:19:27.031 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+09:19:28.750 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+09:19:30.078 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+09:19:30.406 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+09:19:30.609 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+09:19:30.828 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+09:19:31.046 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+09:19:31.234 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+09:19:31.718 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+09:19:32.015 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+10:58:08.109 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+10:58:09.796 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+11:00:46.453 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+11:00:47.156 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+11:00:47.828 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+11:00:48.046 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+11:00:48.265 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+11:00:48.437 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+11:00:48.718 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+11:00:48.953 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+11:00:49.281 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+11:00:49.546 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+15:27:47.187 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+15:27:48.375 [main] ERROR o.s.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@123a389] to prepare test instance [com.kedacom.expenses.service.baseconfig.TestConfCostSubjectType@c59ad5]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:308) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:333) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:220) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:301) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:303) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:240) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:180) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197) [.cp/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'iAuthenticate': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sysUserDao' defined in URL [jar:file:/E:/Java/maven/repos/com/kedacom/kedacom-security/1.0.2-SNAPSHOT/kedacom-security-1.0.2-SNAPSHOT.jar!/com/kedacom/security/dao/SysUserDao.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [conf/app-resources.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:300) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1064) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:574) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sysUserDao' defined in URL [jar:file:/E:/Java/maven/repos/com/kedacom/kedacom-security/1.0.2-SNAPSHOT/kedacom-security-1.0.2-SNAPSHOT.jar!/com/kedacom/security/dao/SysUserDao.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [conf/app-resources.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:527) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:435) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:409) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:541) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:147) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:297) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 38 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [conf/app-resources.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1412) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByName(AbstractAutowireCapableBeanFactory.java:1094) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1044) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 49 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at com.kedacom.core.mybatis.SqlSessionFactoryFactoryBean.createSqlSessionFactory(SqlSessionFactoryFactoryBean.java:67) ~[kedacom-core-1.0.2-SNAPSHOT.jar:1.0.2-SNAPSHOT]
+	at com.kedacom.core.mybatis.SqlSessionFactoryFactoryBean.afterPropertiesSet(SqlSessionFactoryFactoryBean.java:37) ~[kedacom-core-1.0.2-SNAPSHOT.jar:1.0.2-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1469) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1409) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 58 common frames omitted
+Caused by: java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:83) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:62) ~[mybatis-3.0.4.jar:3.0.4]
+	at com.kedacom.core.mybatis.SqlSessionFactoryFactoryBean.createSqlSessionFactory(SqlSessionFactoryFactoryBean.java:65) ~[kedacom-core-1.0.2-SNAPSHOT.jar:1.0.2-SNAPSHOT]
+	... 61 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:69) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:154) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:142) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:137) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:79) ~[mybatis-3.0.4.jar:3.0.4]
+	... 63 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:85) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:93) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:67) ~[mybatis-3.0.4.jar:3.0.4]
+	... 67 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:173) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:72) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:235) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:81) ~[mybatis-3.0.4.jar:3.0.4]
+	... 69 common frames omitted
+15:27:48.718 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+15:27:48.796 [main] ERROR o.s.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@123a389] to prepare test instance [com.kedacom.expenses.service.baseconfig.TestConfCostSubjectType@1d4d493]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:308) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:333) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:220) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:301) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:303) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:240) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:180) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197) [.cp/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'iAuthenticate': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sysUserDao' defined in URL [jar:file:/E:/Java/maven/repos/com/kedacom/kedacom-security/1.0.2-SNAPSHOT/kedacom-security-1.0.2-SNAPSHOT.jar!/com/kedacom/security/dao/SysUserDao.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [conf/app-resources.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:300) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1064) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:574) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sysUserDao' defined in URL [jar:file:/E:/Java/maven/repos/com/kedacom/kedacom-security/1.0.2-SNAPSHOT/kedacom-security-1.0.2-SNAPSHOT.jar!/com/kedacom/security/dao/SysUserDao.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [conf/app-resources.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:527) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:435) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:409) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:541) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:147) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:297) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 38 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [conf/app-resources.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1412) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByName(AbstractAutowireCapableBeanFactory.java:1094) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1044) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 49 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at com.kedacom.core.mybatis.SqlSessionFactoryFactoryBean.createSqlSessionFactory(SqlSessionFactoryFactoryBean.java:67) ~[kedacom-core-1.0.2-SNAPSHOT.jar:1.0.2-SNAPSHOT]
+	at com.kedacom.core.mybatis.SqlSessionFactoryFactoryBean.afterPropertiesSet(SqlSessionFactoryFactoryBean.java:37) ~[kedacom-core-1.0.2-SNAPSHOT.jar:1.0.2-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1469) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1409) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 58 common frames omitted
+Caused by: java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:83) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:62) ~[mybatis-3.0.4.jar:3.0.4]
+	at com.kedacom.core.mybatis.SqlSessionFactoryFactoryBean.createSqlSessionFactory(SqlSessionFactoryFactoryBean.java:65) ~[kedacom-core-1.0.2-SNAPSHOT.jar:1.0.2-SNAPSHOT]
+	... 61 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:69) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:154) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:142) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:137) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:79) ~[mybatis-3.0.4.jar:3.0.4]
+	... 63 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:85) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:93) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:67) ~[mybatis-3.0.4.jar:3.0.4]
+	... 67 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:173) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:72) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:235) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:81) ~[mybatis-3.0.4.jar:3.0.4]
+	... 69 common frames omitted
+16:56:04.203 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+16:56:04.843 [main] ERROR o.s.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@e8efc5] to prepare test instance [com.kedacom.expenses.service.baseconfig.TestConfCostSubjectType@d5a86c]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:308) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:333) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:220) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:301) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:303) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:240) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:180) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197) [.cp/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'iAuthenticate': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sysUserDao' defined in URL [jar:file:/E:/Java/maven/repos/com/kedacom/kedacom-security/1.0.2-SNAPSHOT/kedacom-security-1.0.2-SNAPSHOT.jar!/com/kedacom/security/dao/SysUserDao.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [conf/app-resources.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:300) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1064) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:574) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sysUserDao' defined in URL [jar:file:/E:/Java/maven/repos/com/kedacom/kedacom-security/1.0.2-SNAPSHOT/kedacom-security-1.0.2-SNAPSHOT.jar!/com/kedacom/security/dao/SysUserDao.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [conf/app-resources.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:527) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:435) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:409) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:541) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:147) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:297) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 38 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [conf/app-resources.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1412) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByName(AbstractAutowireCapableBeanFactory.java:1094) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1044) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 49 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at com.kedacom.core.mybatis.SqlSessionFactoryFactoryBean.createSqlSessionFactory(SqlSessionFactoryFactoryBean.java:67) ~[kedacom-core-1.0.2-SNAPSHOT.jar:1.0.2-SNAPSHOT]
+	at com.kedacom.core.mybatis.SqlSessionFactoryFactoryBean.afterPropertiesSet(SqlSessionFactoryFactoryBean.java:37) ~[kedacom-core-1.0.2-SNAPSHOT.jar:1.0.2-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1469) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1409) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 58 common frames omitted
+Caused by: java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:83) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:62) ~[mybatis-3.0.4.jar:3.0.4]
+	at com.kedacom.core.mybatis.SqlSessionFactoryFactoryBean.createSqlSessionFactory(SqlSessionFactoryFactoryBean.java:65) ~[kedacom-core-1.0.2-SNAPSHOT.jar:1.0.2-SNAPSHOT]
+	... 61 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:69) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:154) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:142) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:137) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:79) ~[mybatis-3.0.4.jar:3.0.4]
+	... 63 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:85) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:93) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:67) ~[mybatis-3.0.4.jar:3.0.4]
+	... 67 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:173) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:72) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:235) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:81) ~[mybatis-3.0.4.jar:3.0.4]
+	... 69 common frames omitted
+16:56:05.187 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+16:56:05.296 [main] ERROR o.s.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@e8efc5] to prepare test instance [com.kedacom.expenses.service.baseconfig.TestConfCostSubjectType@883f8f]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:308) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:333) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:220) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:301) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:303) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:240) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:180) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197) [.cp/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'iAuthenticate': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sysUserDao' defined in URL [jar:file:/E:/Java/maven/repos/com/kedacom/kedacom-security/1.0.2-SNAPSHOT/kedacom-security-1.0.2-SNAPSHOT.jar!/com/kedacom/security/dao/SysUserDao.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [conf/app-resources.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:300) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1064) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:574) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sysUserDao' defined in URL [jar:file:/E:/Java/maven/repos/com/kedacom/kedacom-security/1.0.2-SNAPSHOT/kedacom-security-1.0.2-SNAPSHOT.jar!/com/kedacom/security/dao/SysUserDao.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [conf/app-resources.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:527) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:435) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:409) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:541) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:147) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:297) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 38 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [conf/app-resources.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1412) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByName(AbstractAutowireCapableBeanFactory.java:1094) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1044) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 49 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at com.kedacom.core.mybatis.SqlSessionFactoryFactoryBean.createSqlSessionFactory(SqlSessionFactoryFactoryBean.java:67) ~[kedacom-core-1.0.2-SNAPSHOT.jar:1.0.2-SNAPSHOT]
+	at com.kedacom.core.mybatis.SqlSessionFactoryFactoryBean.afterPropertiesSet(SqlSessionFactoryFactoryBean.java:37) ~[kedacom-core-1.0.2-SNAPSHOT.jar:1.0.2-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1469) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1409) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 58 common frames omitted
+Caused by: java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:83) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:62) ~[mybatis-3.0.4.jar:3.0.4]
+	at com.kedacom.core.mybatis.SqlSessionFactoryFactoryBean.createSqlSessionFactory(SqlSessionFactoryFactoryBean.java:65) ~[kedacom-core-1.0.2-SNAPSHOT.jar:1.0.2-SNAPSHOT]
+	... 61 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:69) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:154) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:142) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:137) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:79) ~[mybatis-3.0.4.jar:3.0.4]
+	... 63 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:85) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:93) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:67) ~[mybatis-3.0.4.jar:3.0.4]
+	... 67 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:173) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:72) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:235) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:81) ~[mybatis-3.0.4.jar:3.0.4]
+	... 69 common frames omitted
+16:59:06.515 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+16:59:06.890 [main] ERROR o.s.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@345b43] to prepare test instance [com.kedacom.expenses.service.baseconfig.TestConfCostSubjectType@153b2cb]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:308) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:333) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:220) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:301) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:303) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:240) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:180) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197) [.cp/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'iAuthenticate': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sysUserDao' defined in URL [jar:file:/E:/Java/maven/repos/com/kedacom/kedacom-security/1.0.2-SNAPSHOT/kedacom-security-1.0.2-SNAPSHOT.jar!/com/kedacom/security/dao/SysUserDao.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [conf/app-resources.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:300) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1064) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:574) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sysUserDao' defined in URL [jar:file:/E:/Java/maven/repos/com/kedacom/kedacom-security/1.0.2-SNAPSHOT/kedacom-security-1.0.2-SNAPSHOT.jar!/com/kedacom/security/dao/SysUserDao.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [conf/app-resources.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:527) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:435) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:409) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:541) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:147) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:297) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 38 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [conf/app-resources.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1412) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByName(AbstractAutowireCapableBeanFactory.java:1094) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1044) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 49 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at com.kedacom.core.mybatis.SqlSessionFactoryFactoryBean.createSqlSessionFactory(SqlSessionFactoryFactoryBean.java:67) ~[kedacom-core-1.0.2-SNAPSHOT.jar:1.0.2-SNAPSHOT]
+	at com.kedacom.core.mybatis.SqlSessionFactoryFactoryBean.afterPropertiesSet(SqlSessionFactoryFactoryBean.java:37) ~[kedacom-core-1.0.2-SNAPSHOT.jar:1.0.2-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1469) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1409) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 58 common frames omitted
+Caused by: java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:83) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:62) ~[mybatis-3.0.4.jar:3.0.4]
+	at com.kedacom.core.mybatis.SqlSessionFactoryFactoryBean.createSqlSessionFactory(SqlSessionFactoryFactoryBean.java:65) ~[kedacom-core-1.0.2-SNAPSHOT.jar:1.0.2-SNAPSHOT]
+	... 61 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:69) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:154) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:142) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:137) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:79) ~[mybatis-3.0.4.jar:3.0.4]
+	... 63 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:85) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:93) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:67) ~[mybatis-3.0.4.jar:3.0.4]
+	... 67 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:173) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:72) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:235) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:81) ~[mybatis-3.0.4.jar:3.0.4]
+	... 69 common frames omitted
+16:59:07.156 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+16:59:07.234 [main] ERROR o.s.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@345b43] to prepare test instance [com.kedacom.expenses.service.baseconfig.TestConfCostSubjectType@1adb7b8]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:308) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:333) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:220) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:301) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:303) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:240) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:180) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197) [.cp/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'iAuthenticate': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sysUserDao' defined in URL [jar:file:/E:/Java/maven/repos/com/kedacom/kedacom-security/1.0.2-SNAPSHOT/kedacom-security-1.0.2-SNAPSHOT.jar!/com/kedacom/security/dao/SysUserDao.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [conf/app-resources.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:300) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1064) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:574) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sysUserDao' defined in URL [jar:file:/E:/Java/maven/repos/com/kedacom/kedacom-security/1.0.2-SNAPSHOT/kedacom-security-1.0.2-SNAPSHOT.jar!/com/kedacom/security/dao/SysUserDao.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [conf/app-resources.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:527) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:435) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:409) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:541) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:147) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:297) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 38 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [conf/app-resources.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1412) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByName(AbstractAutowireCapableBeanFactory.java:1094) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1044) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 49 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at com.kedacom.core.mybatis.SqlSessionFactoryFactoryBean.createSqlSessionFactory(SqlSessionFactoryFactoryBean.java:67) ~[kedacom-core-1.0.2-SNAPSHOT.jar:1.0.2-SNAPSHOT]
+	at com.kedacom.core.mybatis.SqlSessionFactoryFactoryBean.afterPropertiesSet(SqlSessionFactoryFactoryBean.java:37) ~[kedacom-core-1.0.2-SNAPSHOT.jar:1.0.2-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1469) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1409) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 58 common frames omitted
+Caused by: java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:83) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:62) ~[mybatis-3.0.4.jar:3.0.4]
+	at com.kedacom.core.mybatis.SqlSessionFactoryFactoryBean.createSqlSessionFactory(SqlSessionFactoryFactoryBean.java:65) ~[kedacom-core-1.0.2-SNAPSHOT.jar:1.0.2-SNAPSHOT]
+	... 61 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:69) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:154) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:142) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:137) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:79) ~[mybatis-3.0.4.jar:3.0.4]
+	... 63 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:85) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:93) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:67) ~[mybatis-3.0.4.jar:3.0.4]
+	... 67 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:173) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:72) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:235) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:81) ~[mybatis-3.0.4.jar:3.0.4]
+	... 69 common frames omitted
+17:03:22.046 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+17:03:22.390 [main] ERROR o.s.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1ff2e1b] to prepare test instance [com.kedacom.expenses.service.baseconfig.TestConfCostSubjectType@2bfdff]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:308) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:333) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:220) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:301) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:303) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:240) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:180) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197) [.cp/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'iAuthenticate': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sysUserDao' defined in URL [jar:file:/E:/Java/maven/repos/com/kedacom/kedacom-security/1.0.2-SNAPSHOT/kedacom-security-1.0.2-SNAPSHOT.jar!/com/kedacom/security/dao/SysUserDao.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [conf/app-resources.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:300) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1064) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:574) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sysUserDao' defined in URL [jar:file:/E:/Java/maven/repos/com/kedacom/kedacom-security/1.0.2-SNAPSHOT/kedacom-security-1.0.2-SNAPSHOT.jar!/com/kedacom/security/dao/SysUserDao.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [conf/app-resources.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:527) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:435) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:409) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:541) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:147) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:297) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 38 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [conf/app-resources.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1412) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByName(AbstractAutowireCapableBeanFactory.java:1094) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1044) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 49 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at com.kedacom.core.mybatis.SqlSessionFactoryFactoryBean.createSqlSessionFactory(SqlSessionFactoryFactoryBean.java:67) ~[kedacom-core-1.0.2-SNAPSHOT.jar:1.0.2-SNAPSHOT]
+	at com.kedacom.core.mybatis.SqlSessionFactoryFactoryBean.afterPropertiesSet(SqlSessionFactoryFactoryBean.java:37) ~[kedacom-core-1.0.2-SNAPSHOT.jar:1.0.2-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1469) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1409) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 58 common frames omitted
+Caused by: java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:83) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:62) ~[mybatis-3.0.4.jar:3.0.4]
+	at com.kedacom.core.mybatis.SqlSessionFactoryFactoryBean.createSqlSessionFactory(SqlSessionFactoryFactoryBean.java:65) ~[kedacom-core-1.0.2-SNAPSHOT.jar:1.0.2-SNAPSHOT]
+	... 61 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:69) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:154) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:142) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:137) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:79) ~[mybatis-3.0.4.jar:3.0.4]
+	... 63 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:85) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:93) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:67) ~[mybatis-3.0.4.jar:3.0.4]
+	... 67 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:173) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:72) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:235) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:81) ~[mybatis-3.0.4.jar:3.0.4]
+	... 69 common frames omitted
+17:03:22.656 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+17:03:22.734 [main] ERROR o.s.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1ff2e1b] to prepare test instance [com.kedacom.expenses.service.baseconfig.TestConfCostSubjectType@3e5a91]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:308) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:333) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:220) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:301) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:303) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:240) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:180) [spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390) [.cp/:na]
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197) [.cp/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'iAuthenticate': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sysUserDao' defined in URL [jar:file:/E:/Java/maven/repos/com/kedacom/kedacom-security/1.0.2-SNAPSHOT/kedacom-security-1.0.2-SNAPSHOT.jar!/com/kedacom/security/dao/SysUserDao.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [conf/app-resources.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:300) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1064) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:574) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:895) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:425) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:84) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:1) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContext.loadApplicationContext(TestContext.java:280) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:304) ~[spring-test-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sysUserDao' defined in URL [jar:file:/E:/Java/maven/repos/com/kedacom/kedacom-security/1.0.2-SNAPSHOT/kedacom-security-1.0.2-SNAPSHOT.jar!/com/kedacom/security/dao/SysUserDao.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [conf/app-resources.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:527) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:435) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:409) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:541) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:147) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:84) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:297) ~[spring-context-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 38 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [conf/app-resources.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1412) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:291) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:288) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:190) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByName(AbstractAutowireCapableBeanFactory.java:1094) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1044) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 49 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\indigoWorkspace\kedaworkspace\expenses-claims\modules\expenses-business\target\classes\business\mapper\ConfCostSubjectType.map.xml]'; nested exception is java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at com.kedacom.core.mybatis.SqlSessionFactoryFactoryBean.createSqlSessionFactory(SqlSessionFactoryFactoryBean.java:67) ~[kedacom-core-1.0.2-SNAPSHOT.jar:1.0.2-SNAPSHOT]
+	at com.kedacom.core.mybatis.SqlSessionFactoryFactoryBean.afterPropertiesSet(SqlSessionFactoryFactoryBean.java:37) ~[kedacom-core-1.0.2-SNAPSHOT.jar:1.0.2-SNAPSHOT]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1469) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1409) ~[spring-beans-3.0.3.RELEASE.jar:3.0.3.RELEASE]
+	... 58 common frames omitted
+Caused by: java.lang.RuntimeException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:83) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:62) ~[mybatis-3.0.4.jar:3.0.4]
+	at com.kedacom.core.mybatis.SqlSessionFactoryFactoryBean.createSqlSessionFactory(SqlSessionFactoryFactoryBean.java:65) ~[kedacom-core-1.0.2-SNAPSHOT.jar:1.0.2-SNAPSHOT]
+	... 61 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class . Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:69) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:154) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:142) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:137) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:79) ~[mybatis-3.0.4.jar:3.0.4]
+	... 63 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.kedacom.platform.model.conf.ConfCostSubjectType'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:85) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:93) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:67) ~[mybatis-3.0.4.jar:3.0.4]
+	... 67 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.kedacom.platform.model.conf.ConfCostSubjectType
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:173) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:72) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:235) ~[mybatis-3.0.4.jar:3.0.4]
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:81) ~[mybatis-3.0.4.jar:3.0.4]
+	... 69 common frames omitted
+17:03:44.890 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+17:03:46.171 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()

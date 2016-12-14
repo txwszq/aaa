@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.kedacom.expenses.model.baseconfig.ConfCostSubjectType">
+	<resultMap id="ConfCostSubjectType" type="com.kedacom.expenses.model.baseconfig.ConfCostSubjectType">
+			<id property="id" column="id" jdbcType="NUMERIC"/>
+			<result property="code" column="code" jdbcType="VARCHAR"/>
+			<result property="cost_name" column="cost_name" jdbcType="VARCHAR"/>
+			<result property="parent_id" column="parent_id" jdbcType="NUMERIC"/>
+			<result property="is_leaf" column="is_leaf" jdbcType="NUMERIC"/>
+			<result property="is_exact_person" column="is_exact_person" jdbcType="NUMERIC"/>
+			<result property="ctrl_time" column="ctrl_time" jdbcType="NUMERIC"/>
+			<result property="ctrl_amount" column="ctrl_amount" jdbcType="NUMERIC"/>
+			<result property="amount_unit" column="amount_unit" jdbcType="NUMERIC"/>
+			<result property="keyuan_k3_code" column="keyuan_k3_code" jdbcType="VARCHAR"/>
+			<result property="lingshi_k3_code" column="lingshi_k3_code" jdbcType="VARCHAR"/>
+			<result property="keda_k3_code" column="keda_k3_code" jdbcType="VARCHAR"/>
+			<result property="remarks" column="remarks" jdbcType="VARCHAR"/>
+	</resultMap>
+	
+	<sql id="columns">
+		id ,code, cost_name ,parent_id ,is_leaf ,is_exact_person ,ctrl_time ,ctrl_amount ,amount_unit, keyuan_k3_code ,lingshi_k3_code ,keda_k3_code ,remarks 
+	</sql>
+	
+	<sql id="dynamicWhere">
+		<where>
+				<if test="@Ognl@isNotEmpty(cost_name)"> AND cost_name = #{cost_name} </if>
+				<if test="@Ognl@isNotEmpty(parent_id)"> AND parent_id = #{parent_id} </if>
+				<if test="@Ognl@isNotEmpty(code)"> AND code = #{code} </if>
+				<if test="@Ognl@isNotEmpty(is_leaf)"> AND is_leaf = #{is_leaf} </if>
+				<if test="@Ognl@isNotEmpty(is_exact_person)"> AND is_exact_person = #{is_exact_person} </if>
+				<if test="@Ognl@isNotEmpty(ctrl_time)"> AND ctrl_time = #{ctrl_time} </if>
+				<if test="@Ognl@isNotEmpty(ctrl_amount)"> AND ctrl_amount = #{ctrl_amount} </if>
+				<if test="@Ognl@isNotEmpty(amount_unit)"> AND amount_unit = #{amount_unit} </if>
+				<if test="@Ognl@isNotEmpty(keyuan_k3_code)"> AND keyuan_k3_code LIKE '%${keyuan_k3_code}%' </if>
+				<if test="@Ognl@isNotEmpty(lingshi_k3_code)"> AND lingshi_k3_code LIKE '%${lingshi_k3_code}%' </if>
+				<if test="@Ognl@isNotEmpty(keda_k3_code)"> AND keda_k3_code LIKE '%${keda_k3_code}%' </if>
+				<if test="@Ognl@isNotEmpty(remarks)"> AND remarks LIKE '%${remarks}%' </if>
+		</where>
+	</sql>
+	
+	<insert id="add" parameterType="com.kedacom.expenses.model.baseconfig.ConfCostSubjectType"
+	useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO conf_cost_subject_type
+		(<include refid="columns"/>)
+		VALUES
+		(#{id,jdbcType=NUMERIC},#{code,jdbcType=VARCHAR},#{cost_name,jdbcType=VARCHAR},#{parent_id,jdbcType=NUMERIC},#{is_leaf,jdbcType=NUMERIC},#{is_exact_person,jdbcType=NUMERIC},#{ctrl_time,jdbcType=NUMERIC},#{ctrl_amount,jdbcType=NUMERIC},#{amount_unit,jdbcType=NUMERIC},#{keyuan_k3_code,jdbcType=VARCHAR},#{lingshi_k3_code,jdbcType=VARCHAR},#{keda_k3_code,jdbcType=VARCHAR},#{remarks,jdbcType=VARCHAR})
+	</insert>
+	
+	<delete id="delById" parameterType="java.lang.Long">
+		DELETE FROM conf_cost_subject_type 
+		WHERE
+		id=#{id}
+	</delete>
+	
+	
+	<update id="update" parameterType="com.kedacom.expenses.model.baseconfig.ConfCostSubjectType">
+		UPDATE conf_cost_subject_type  SET
+		id=#{id,jdbcType=NUMERIC},
+		code=#{code,jdbcType=VARCHAR},
+		cost_name=#{cost_name,jdbcType=VARCHAR},
+		parent_id=#{parent_id,jdbcType=NUMERIC},
+		is_leaf=#{is_leaf,jdbcType=NUMERIC},
+		is_exact_person=#{is_exact_person,jdbcType=NUMERIC},
+		ctrl_time=#{ctrl_time,jdbcType=NUMERIC},
+		ctrl_amount=#{ctrl_amount,jdbcType=NUMERIC},
+		amount_unit=#{amount_unit,jdbcType=NUMERIC},
+		keyuan_k3_code=#{keyuan_k3_code,jdbcType=VARCHAR},
+		lingshi_k3_code=#{lingshi_k3_code,jdbcType=VARCHAR},
+		keda_k3_code=#{keda_k3_code,jdbcType=VARCHAR},
+		remarks=#{remarks,jdbcType=VARCHAR}
+		WHERE
+		id=#{id}
+	</update>
+	
+	
+	<select id="getById" parameterType="java.lang.Long" resultMap="ConfCostSubjectType" useCache="true">
+		SELECT <include refid="columns"/>
+		FROM conf_cost_subject_type
+		WHERE id=#{id}
+	</select>
+	
+	
+	<select id="getByCode" parameterType="java.lang.String" resultMap="ConfCostSubjectType" useCache="true">
+		SELECT <include refid="columns"/>
+		FROM conf_cost_subject_type
+		WHERE code=#{code}
+	</select>
+	
+	<select id="getCostType" parameterType="java.lang.Long" resultMap="ConfCostSubjectType" useCache="true">
+		SELECT <include refid="columns"/>
+		FROM conf_cost_subject_type
+		WHERE parent_id is not null
+		and is_leaf=#{isLeaf}
+	</select>
+	
+	<select id="getCostTypeByCtrlamount" parameterType="java.util.Map" resultMap="ConfCostSubjectType" useCache="true">
+		SELECT <include refid="columns"/>
+		FROM conf_cost_subject_type
+		WHERE is_leaf=#{isLeaf}
+		and ctrl_amount=#{ctrlAmount}
+	</select>
+	
+	<select id="getByCostName" parameterType="java.lang.String" resultMap="ConfCostSubjectType" useCache="true">
+		SELECT <include refid="columns"/>
+		FROM conf_cost_subject_type
+		WHERE cost_name=#{cost_name}
+	</select>
+	
+	<select id="getAll" resultMap="ConfCostSubjectType" useCache="false">
+		SELECT <include refid="columns"/>
+		FROM conf_cost_subject_type   
+		<include refid="dynamicWhere" />
+		<if test="@Ognl@isNotEmpty(orderField)">
+		order by ${orderField} ${orderSeq}
+		</if>
+		<if test="@Ognl@isEmpty(orderField)">
+		order by id  asc
+		</if>
+	</select>
+</mapper>

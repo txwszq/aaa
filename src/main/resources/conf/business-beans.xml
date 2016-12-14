@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd"
+    default-autowire="byName" default-lazy-init="false">
+
+
+    <aop:aspectj-autoproxy proxy-target-class="true" />
+    <!-- spring上下文,可以获取 上下文的Context -->
+    <bean id="appUtil" class="com.kedacom.core.utils.ApplicationUtil" />
+    <!--<bean id="dynamicLoadBean" class="com.kedacom.core.util.DynamicLoadBean" />-->
+    <!-- 资源文件操作类 -->
+    <!--<bean id="resourceUtil" class="com.kedacom.core.util.ResourceUtil" />-->
+    <!-- 缓存操作类，如果需要修改缓存的实现，修改实现的class就可以了，id不要修改。 -->
+    <bean id="iCache" class="com.kedacom.core.cache.impl.MemoryCache"></bean>
+
+    <!-- 用户组织角色操作接口的实现类 -->
+    <bean id="iAuthenticate" class="com.kedacom.security.service.impl.AuthenticateImpl"></bean>
+
+    <!-- 定时器服务类 -->
+   <bean id="schedulerService" class="com.kedacom.expenses.scheduler.SchedulerService"></bean>
+
+    <!-- 表元数据操作类 -->
+    <!--<bean id="tableMeta" class="com.kedacom.core.customertable.TableMetaFactoryBean">-->
+        <!--<property name="sysDataSource">-->
+            <!--<bean id="sysdatasource" class="com.kedacom.platform.model.system.SysDataSource">-->
+                <!--<property name="alias" value="system-datasource"></property>-->
+                <!--<property name="driverName" value="${jdbc.driverClassName}"></property>-->
+                <!--<property name="url" value="${jdbc.url}"></property>-->
+                <!--<property name="userName" value="${jdbc.username}"></property>-->
+                <!--<property name="password" value="${jdbc.password}"></property>-->
+                <!--<property name="dbType" value="${jdbc.dbType}"></property>-->
+            <!--</bean>-->
+        <!--</property>-->
+    <!--</bean>-->
+    <!-- 方言 -->
+    <bean id="dialect" class="com.kedacom.core.customertable.DialectFactoryBean">
+        <property name="dbType" value="${jdbc.dbType}" />
+    </bean>
+    <!-- jdbcDao 实现了分页查询。 -->
+    <bean id="jdbcDao" class="com.kedacom.core.db.JdbcDao">
+        <property name="jdbcTemplate" ref="jdbcTemplate"></property>
+        <property name="dialect" ref="dialect"></property>
+    </bean>
+   
+</beans>

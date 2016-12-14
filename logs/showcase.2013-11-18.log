@@ -1,0 +1,56 @@
+09:35:39.390 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+09:35:40.546 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+09:35:41.234 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+09:35:41.484 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+09:35:41.671 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+09:35:41.906 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+09:35:42.312 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+09:35:42.484 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+09:35:42.750 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+09:35:42.953 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+09:35:43.140 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+09:35:43.375 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+09:35:43.625 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+09:35:43.796 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+09:39:39.031 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+09:39:40.062 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+09:39:40.890 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+09:39:41.156 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+09:39:41.390 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+09:39:41.703 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+09:39:42.171 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+09:39:42.453 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+09:39:42.734 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+09:39:43.000 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+09:39:43.234 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+09:39:43.500 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+09:39:43.796 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+09:39:44.015 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+09:42:58.593 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+09:42:59.593 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+09:43:00.234 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+09:43:00.500 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+09:43:00.812 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+09:43:01.062 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+09:43:01.500 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+09:43:01.671 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+09:43:01.984 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+09:43:02.203 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+09:43:02.453 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+09:43:02.640 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+09:43:02.875 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+09:43:03.078 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+13:32:54.875 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+13:32:56.796 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+13:32:57.953 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+13:32:58.171 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+13:32:58.562 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+13:32:58.843 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+13:32:59.218 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+13:32:59.484 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+13:32:59.765 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+13:32:59.968 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+13:33:00.265 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+13:33:00.531 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+13:33:00.718 [main] ERROR c.alibaba.druid.pool.DruidDataSource - testWhileIdle is true, validationQuery not set
+13:33:00.984 [main] WARN  c.k.security.filter.PermissionFilter - Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
